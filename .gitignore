@@ -1,0 +1,12 @@
+node_modules/
+.expo/
+dist/
+web-build/
+android/
+ios/
+*.apk
+*.aab
+*.log
+.DS_Store
+npm-debug.*
+# Brondelen van de lessen worden samengevoegd tot src/content/levels/levelNN.json (die wel mee gaan).
