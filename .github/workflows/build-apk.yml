@@ -1,7 +1,5 @@
-name: APK bouwen
+name: Bouw Android-APK
 
-# Bouwt bij elke push naar main een installeerbare Android-APK en zet die op de
-# releasepagina (tag "latest"). Je kunt hem ook met de hand starten: tabblad Actions > APK bouwen > Run workflow.
 on:
   push:
     branches: [main]
@@ -11,11 +9,11 @@ permissions:
   contents: write
 
 concurrency:
-  group: apk
+  group: build-apk
   cancel-in-progress: true
 
 jobs:
-  build:
+  apk:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
@@ -31,37 +29,37 @@ jobs:
           java-version: 17
 
       - name: Pakketten installeren
-        run: npm install --no-audit --no-fund
-
-      - name: Pakketversies op de Expo-versie afstemmen
-        run: npx expo install --fix
+        run: |
+          npm install --no-audit --no-fund
+          npx expo install --fix
 
       - name: Lesinhoud controleren
         run: |
           node scripts/validate-content.mjs
-          npx tsx scripts/check-answers.ts
           node scripts/build-index.mjs
+          npx tsx scripts/check-answers.ts
 
-      - name: Tests draaien
+      - name: Tests
         run: npx tsx --test tests/*.test.ts
 
-      - name: Typecontrole (mag falen zonder de build te stoppen)
+      - name: Types controleren (waarschuwing, blokkeert de build niet)
         continue-on-error: true
         run: npx tsc --noEmit
 
       - name: Android-project genereren
         run: npx expo prebuild --platform android --no-install --clean
 
+      - name: Android-licenties accepteren
+        run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
+
       - name: APK bouwen
         working-directory: android
-        run: |
-          chmod +x gradlew
-          ./gradlew assembleRelease --no-daemon -PreactNativeArchitectures=arm64-v8a,armeabi-v7a
+        run: ./gradlew assembleRelease --no-daemon -PreactNativeArchitectures=arm64-v8a,armeabi-v7a
 
       - name: APK klaarzetten
         run: |
           mkdir -p out
-          cp android/app/build/outputs/apk/release/*.apk out/Hablemos.apk
+          cp android/app/build/outputs/apk/release/app-release.apk out/Hablemos.apk
           ls -la out
 
       - uses: actions/upload-artifact@v4
@@ -69,7 +67,7 @@ jobs:
           name: Hablemos-apk
           path: out/Hablemos.apk
 
-      - name: Release "latest" bijwerken
+      - name: Release "latest" bijwerken (downloadlink voor je telefoon)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -77,5 +75,5 @@ jobs:
           gh release create latest out/Hablemos.apk \
             --target "${{ github.sha }}" \
             --title "Hablemos (build ${{ github.run_number }})" \
-            --notes "Download Hablemos.apk op je telefoon en open het bestand om te installeren. Build ${{ github.run_number }}, commit ${{ github.sha }}." \
+            --notes "Nieuwste versie van Hablemos. Download Hablemos.apk op je Android-telefoon en open het bestand om te installeren." \
             --latest

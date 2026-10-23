@@ -168,7 +168,10 @@ for (const file of files) {
   if (!arr(lv.goals) || lv.goals.length < 3) err(name, 'goals: minstens 3 doelen');
   else lv.goals.forEach((g, i) => checkText(name, `goals[${i}]`, g));
   if (!lv.badge || !str(lv.badge.name) || !str(lv.badge.emoji) || !str(lv.badge.desc)) err(name, 'badge heeft name, emoji en desc nodig');
-  if (!arr(lv.lessons) || lv.lessons.length < 9 || lv.lessons.length > 14) { err(name, `lessons: 9 tot 14 lessen nodig (nu ${arr(lv.lessons) ? lv.lessons.length : '?'})`); continue; }
+  if (!arr(lv.lessons) || lv.lessons.length !== 10) { err(name, `lessons: precies 10 lessen nodig (nu ${arr(lv.lessons) ? lv.lessons.length : '?'})`); continue; }
+  const PATTERN = ['learn', 'practice', 'dialogue', 'learn', 'practice', 'dialogue', 'learn', 'practice', 'dialogue', 'test'];
+  lv.lessons.forEach((l, i) => { if (l.kind !== PATTERN[i]) err(name, `les ${i + 1} moet kind "${PATTERN[i]}" zijn (nu "${l.kind}")`); });
+  if (!(lv.lessons[8]?.dialogue?.tags || []).includes('politie')) err(name, 'les 9 (het laatste gesprek) moet tag "politie" hebben');
 
   const counts = { learn: 0, practice: 0, dialogue: 0, test: 0 };
   const types = {};

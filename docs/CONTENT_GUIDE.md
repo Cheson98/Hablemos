@@ -1,289 +1,269 @@
-# Hablemos: handleiding voor het schrijven van lesinhoud
+# Hablemos: handleiding voor lesauteurs
 
-Dit is de opdracht voor iedereen die een niveau (level) van Hablemos schrijft. Lees het hele document voordat je begint.
+Hablemos is een Android-app waarmee een Nederlandse politieagent Spaans leert **spreken**. Dit is de handleiding voor wie een niveau (een `levelNN.json`) schrijft. Lees ook `docs/CURRICULUM.md`: daar staat wat elk niveau moet bevatten.
 
-## 1. Wat is Hablemos?
+## 1. De leerder en het doel
 
-Een Android-app waarmee één Nederlandse politieagent Spaans leert **spreken**. Het doel is dat hij een gesprek kan voeren, niet dat hij woordenlijsten stampt.
+- Absolute beginner, Nederlandstalig, werkt als politieagent in Nederland.
+- Leert **Spaans uit Spanje** (tú, usted, vosotros, ustedes; woorden als *coche, ordenador, móvil, zumo, vale, piso*). Geen Latijns-Amerikaans Spaans (*carro, computadora, celular, jugo, ahorita, platicar* ...).
+- Het doel is een gesprek kunnen voeren, geen woordjes stampen. Elke les draait om iets wat je **kunt zeggen of begrijpen**. Woorden komen mee als onderdeel van zinnen en situaties.
+- Gebruiksdoelen: toeristen helpen, aangifte opnemen, controle en aanhouding, noodsituaties, en begrijpen wat Spaanstaligen aan een Nederlandse agent kunnen vragen. Daarnaast reizen, werk, dagelijks leven en sociale gesprekken.
+- Sessies duren 15 tot 20 minuten. Eén les is ongeveer 10 tot 15 minuten.
+- De app is mobiel (Android), speels en vriendelijk. Een vos (Zorro) reageert op goede en foute antwoorden. Jij schrijft alleen de inhoud.
 
-- Beginner (nul voorkennis) tot begin B1, in 13 niveaus (ca. 130 lessen).
-- **Spaans uit Spanje** (peninsular). Dus: *vosotros* in tabellen, *coche*, *ordenador*, *móvil*, *zumo*, *vale*, *piso*, *coger* (gewoon OK in Spanje), geen Latijns-Amerikaanse woorden (*carro*, *celular*, *jugo*, *computadora*, *platicar*, *plata*, *manejar*, *ahorita*, *vos*). In Spanje is *ustedes* alleen de beleefde meervoudsvorm. Gebruik het pretérito perfecto zoals in Spanje voor "vandaag/recent verleden".
-- Thema's: reizen, werk, dagelijks leven, sociaal en **politiewerk**. De gebruiker wil kunnen: toeristen helpen, aangifte opnemen, een controle of aanhouding doen, noodsituaties afhandelen, en begrijpen welke vragen Spaanstaligen aan een Nederlandse politieagent kunnen stellen. De situaties spelen zich meestal **in Nederland** af (Ámsterdam, Rotterdam, La Haya, Utrecht, estación central, tranvía, bicicleta, carril bici, comisaría de policía), met Spaanse toeristen, studenten en expats.
-- Alles wat hij leert hoort hem in staat te stellen iets te **zeggen**. Grammatica dient het gesprek.
-- Gebruiker: typt antwoorden, hoort Spaanse zinnen voorgelezen (stem uit Spanje). Hij spreekt niet in.
-- Sessies van ca. 15 tot 20 minuten. Speels, vriendelijk, bemoedigend. Een vosje (zorro) is de mascotte; jij hoeft hem niet te noemen.
+## 2. Werkwijze en bestanden
 
-## 2. Bestanden en werkwijze
-
-Je schrijft **één niveau** in losse bestanden:
+Je schrijft **één niveau**: de bestanden in `content-src/levelNN/` (NN = tweecijferig, bv. `level03`). Raak geen andere bestanden aan, ook niet de bestanden van andere niveaus, en draai `scripts/build-index.mjs` **niet**.
 
 ```
-content-src/levelNN/meta.json          (niveau-velden, zonder "lessons")
-content-src/levelNN/lesson-01.json     (één les per bestand, 10 stuks)
+content-src/levelNN/meta.json          niveau-gegevens (zonder lessen)
+content-src/levelNN/lesson-01.json     les 1
 ...
-content-src/levelNN/lesson-10.json
+content-src/levelNN/lesson-10.json     les 10 (de toets)
 ```
 
-Dan voer je uit (vanuit de projectmap `/home/claude/hablemos`):
+Schrijf per les één bestand met één `Write`-aanroep (zo blijft elk bestand overzichtelijk). Daarna:
 
+```bash
+cd /home/claude/hablemos
+node scripts/assemble-level.mjs 3                                  # voegt samen en zet de id's goed (je hoeft zelf geen id's in te vullen)
+node scripts/validate-content.mjs src/content/levels/level03.json  # structuurcontrole
+/home/claude/.npm-global/bin/tsx scripts/check-answers.ts src/content/levels/level03.json   # keurt elk modelantwoord goed?
 ```
-node scripts/assemble-level.mjs NN          # voegt samen tot src/content/levels/levelNN.json en zet de id's
-node scripts/validate-content.mjs src/content/levels/levelNN.json    # structuur en stijlcontrole
-npx tsx scripts/check-answers.ts src/content/levels/levelNN.json     # test of de app al je antwoorden accepteert
-```
 
-Herhaal tot er **geen fouten** zijn. Lees ook de waarschuwingen en los ze op als ze terecht zijn (bv. een Latijns-Amerikaans woord, een fill zonder hint, ontbrekende vertaling). Id's hoef je niet zelf te verzinnen: de assemble-stap zet ze (laat `"id"` weg of zet er iets in; het wordt overschreven).
-
-Schrijf de bestanden met de Write-tool, één les per keer. Gebruik geldige JSON (dubbele aanhalingstekens, geen losse komma's, geen commentaar). Binnen tekst mag je `«` en `»` gebruiken voor Nederlandse citaten om escapen te voorkomen. Een dubbele aanhalingsteken binnen een string schrijf je als `\"`.
-
-## 3. Structuur van een niveau
+Herhaal tot er **geen fouten** meer zijn. Waarschuwingen mag je lezen en waar zinvol oplossen (ze wijzen bv. op een Latijns-Amerikaans woord of een ontbrekende vertaling).
 
 `meta.json`:
 
 ```json
 {
-  "title": "¡Hola!",
-  "subtitle": "Jezelf voorstellen en je naam spellen",
+  "title": "Hola y presentarse",
+  "subtitle": "Begroeten en jezelf voorstellen",
   "emoji": "👋",
   "instructionLang": "nl",
-  "goals": [
-    "Je kunt groeten en afscheid nemen, beleefd en informeel",
-    "Je kunt jezelf voorstellen en vragen hoe iemand heet",
-    "Je kunt een naam spellen en tot 20 tellen"
-  ],
-  "badge": { "name": "Primer contacto", "emoji": "🤝", "desc": "Je hebt niveau 1 afgerond." }
+  "goals": ["Je kunt iemand begroeten en afscheid nemen", "Je kunt je naam en nationaliteit zeggen", "Je kunt je naam spellen"],
+  "badge": { "name": "Primer contacto", "emoji": "🤝", "desc": "Rond niveau 1 af." }
 }
 ```
 
-- `goals`: 4 tot 6 "Je kunt ..."-doelen in het Nederlands, concreet en gesprek-gericht.
-- `badge.emoji` en `badge.name` moeten uniek zijn voor dit niveau (zie de tabel in hoofdstuk 8 voor de afgesproken namen en emoji).
+`goals`: 3 tot 5 "Je kunt ..."-doelen in het Nederlands. De badge-emoji moet uniek zijn ten opzichte van andere niveaus (zie CURRICULUM).
 
-**Elk niveau heeft precies 10 lessen in deze vaste volgorde:**
+## 3. Vaste opbouw: precies 10 lessen per niveau
 
-| # | kind | inhoud |
-|---|------|--------|
-| 1 | `learn` | uitleg (kaarten) + korte quiz |
-| 2 | `practice` | oefenen |
-| 3 | `dialogue` | gesprek (gescript) |
-| 4 | `learn` | uitleg + quiz |
-| 5 | `practice` | oefenen |
-| 6 | `dialogue` | gesprek |
-| 7 | `learn` | uitleg + quiz |
-| 8 | `practice` | oefenen, mix van het hele niveau |
-| 9 | `dialogue` | **politiegesprek** (`"tags": ["politie"]`) |
-| 10 | `test` | niveautoets (laatste les, 80% nodig) |
+| Les | kind | Wat | Omvang |
+|---|---|---|---|
+| 1 | `learn` | uitleg + quiz | 5 tot 7 kaarten, quiz van 6 tot 7 oefeningen |
+| 2 | `practice` | oefenen van les 1 | 12 tot 14 oefeningen |
+| 3 | `dialogue` | gesprek: dagelijks leven of sociaal | 7 tot 9 beurten voor de leerder (`you`) |
+| 4 | `learn` | uitleg + quiz | idem |
+| 5 | `practice` | oefenen van les 4 + herhaling | 12 tot 14 oefeningen |
+| 6 | `dialogue` | gesprek: reizen of werk (vanaf niveau 5 ook politie-achtig) | 7 tot 9 beurten |
+| 7 | `learn` | uitleg + quiz | idem |
+| 8 | `practice` | oefenen van les 7 + herhaling | 12 tot 14 oefeningen |
+| 9 | `dialogue` | **politie**: tag `"politie"` verplicht | 7 tot 9 beurten |
+| 10 | `test` | niveautoets over het hele niveau | 18 tot 20 oefeningen |
 
-Aantallen (de validator dwingt de ondergrenzen af, streef naar de **bovenkant**):
+Een gesprek heeft ongeveer evenveel beurten voor de gesprekspartner (`npc`) als voor de leerder, begint altijd met een `npc`-beurt en heeft nooit twee `you`-beurten achter elkaar. Totaal maximaal 24 beurten.
 
-- `learn`: 6 tot 7 kaarten (max 9) en 6 tot 7 quizvragen (max 7).
-- `practice`: 12 tot 14 oefeningen.
-- `dialogue`: 16 tot 20 beurten in totaal, waarvan 7 tot 9 beurten van de gebruiker (`who: "you"`). Begin met een beurt van de ander (`npc`). Nooit twee gebruikersbeurten achter elkaar. Max 24 beurten.
-- `test`: 18 tot 20 oefeningen, gelijkmatig over het hele niveau, alle oefenvormen die in het niveau voorkomen.
+De toets: dekt alle doelen van het niveau, bevat minstens 40% getypte antwoorden (`fill`, `write`, `build`) en 3 luisteroefeningen. Wie 80% haalt, komt verder.
 
-Elke les heeft `kind`, `title` (kort, max ca. 28 tekens, de titel verschijnt onder de knop in het leerpad) en `emoji`.
+**Herhaling (spiraal):** minstens 3 oefeningen in elke oefenles en 4 in de toets gaan over stof uit eerdere niveaus (zonder nieuwe woorden). Zo blijft het hangen.
 
-## 4. Oefenvormen (exacte velden)
+## 4. Het datamodel met voorbeelden
 
-Alle oefeningen kunnen daarnaast deze optionele velden hebben: `hint` (NL, achter de 💡-knop, hint zonder het antwoord weg te geven), `explain` (NL, wordt na het antwoord getoond; kort, 1 tot 2 zinnen, het *waarom*), `nl` (Nederlandse vertaling van de Spaanse zin in de opgave, voor de 🌐-knop), `wrong` (typische fouten, zie onder), `strictSubject` (zie onder), `tag` (grammaticalabel, bv. `"ser"`).
+De types staan in `src/types.ts`. Hieronder alles wat je nodig hebt. Je laat `id` weg: `assemble-level.mjs` vult ze in.
 
-**choice** (meerkeuze, 2 tot 5 opties; 3 of 4 is standaard)
+Opmaak in tekst: alleen `**vet**` en regeleinden (`\n`). Lijstjes in kaarten: regels die met `- ` beginnen. Geen HTML, geen andere markdown. Gebruik voor aanhalingen in het Nederlands `«...»` (dan hoef je geen `\"` te escapen). Gebruik echte Spaanse tekens: á é í ó ú ñ ü ¿ ¡.
 
-```json
-{ "type": "choice", "prompt": "Wat zeg je als je iemand 's ochtends groet?",
-  "options": ["Buenas noches", "Buenos días", "Hasta luego"], "answer": 1,
-  "explain": "«Días» is mannelijk: buenos días.", "nl": "..." }
-```
-
-- Opties zijn standaard Spaans. Zijn ze Nederlands, zet dan `"optionsLang": "nl"`. Is de prompt Spaans, zet dan `"promptLang": "es"`.
-- `optionsNl`: Nederlandse vertaling per optie (alleen bij Spaanse opties), zichtbaar via 🌐. **Verplicht in gesprekken.**
-- `speak`: Spaanse tekst die voorgelezen kan worden (voor begrijpend luisteren/lezen): `{ "prompt": "Wat vraagt de toerist?", "speak": "¿Dónde está la estación?", ... }`. Zet in zo'n geval de Spaanse zin ook in de prompt of laat hem alleen horen; de 🔊-knop verschijnt vanzelf.
-- `**vet**` in de prompt is toegestaan.
-
-**fill** (één woord of woordgroep invullen)
-
-```json
-{ "type": "fill", "sentence": "Nosotros ___ en Ámsterdam.", "answers": ["vivimos"],
-  "base": "(vivir, nosotros)", "nl": "Wij wonen in Amsterdam.", "hint": "-ir werkwoord" }
-```
-
-- Precies één `___` in `sentence`. `answers` bevat alleen het ontbrekende stuk, met alle goede varianten.
-- Geef `base` (infinitief en persoon) of een `hint`, en altijd `nl`.
-
-**build** (zin opbouwen met woordtegels)
-
-```json
-{ "type": "build", "prompt": "Zeg: «Ik heet Pedro en ik ben agent.»",
-  "words": ["Me", "llamo", "Pedro", "y", "soy", "agente", "tengo", "es"],
-  "answers": ["Me llamo Pedro y soy agente"] }
-```
-
-- `words`: elk item is **één woord** (leestekens blijven aan het woord vastzitten, bv. `"¿Cómo"` en `"llamas?"`). 5 tot 10 woorden, hoogstens **3 afleiders** (woorden die niet nodig zijn, liefst verleidelijke fouten). Elk woord uit elk antwoord moet in `words` staan; hoofdletters en leestekens moeten exact kloppen met je antwoord.
-- Meerdere goede zinnen? Zet ze allemaal in `answers` (de eerste is de modelzin). Alle woorden van elke variant moeten in `words` staan.
-
-**write** (zelf een zin typen)
-
-```json
-{ "type": "write", "prompt": "Zeg tegen een toerist: «Mag ik uw paspoort zien, alstublieft?»",
-  "answers": ["¿Puedo ver su pasaporte, por favor?", "¿Me enseña su pasaporte, por favor?", "¿Me muestra su pasaporte, por favor?"],
-  "hint": "Je spreekt beleefd (usted)." }
-```
-
-- Geef alle redelijk natuurlijke goede varianten, maar **alleen correct Spaans**. De app is mild: hoofdletters, leestekens (¿ ¡ . ,) en accenten tellen niet mee, en een beginnend onderwerpswoord (*yo, tú, él, ella, usted, nosotros/as, vosotros/as, ellos/as, ustedes*) mag je weglaten of toevoegen. Bij *tú*/*usted* kun je dat dus **niet** gebruiken om te toetsen; vraag het via de context ("Je spreekt een oudere dame aan: ...").
-- Zet `"strictSubject": true` als het onderwerpswoord er bewust moet staan (zeldzaam, bv. bij de les over pronombres).
-
-**listen** (luisteroefening; de zin wordt voorgelezen, nooit in de tekst getoond)
-
-```json
-{ "type": "listen", "mode": "choose", "es": "Me llamo Carmen.",
-  "options": ["Me llamo Carmen.", "Se llama Carmen.", "Te llamas Carmen."], "answer": 0, "nl": "Ik heet Carmen." }
-{ "type": "listen", "mode": "type", "es": "Tengo veinte años.", "answers": ["Tengo veinte años"], "nl": "Ik ben twintig jaar." }
-```
-
-- `choose`: opties zijn Spaans (wat je hoort), maak ze vergelijkbaar klinkend. `type`: de gebruiker typt wat hij hoort; `answers` mag weggelaten worden (dan geldt `es`).
-- Niet toegestaan in gesprekken. Gebruik ze ook niet voor lange zinnen in de eerste twee niveaus (max ca. 6 woorden).
-
-**wrong** (foutpatronen bij getypte antwoorden)
-
-```json
-"wrong": [
-  { "match": "soy 30 años", "feedback": "Leeftijd zeg je met **tener**: «tengo 30 años», niet met ser." },
-  { "match": "me llama", "feedback": "«Me llamo»: bij *yo* eindigt het werkwoord op -o." }
-]
-```
-
-`match` wordt (zonder hoofdletters/leestekens/accenten) gezocht **in** het antwoord van de gebruiker. Gebruik het voor de 1 tot 2 fouten die Nederlanders echt maken, in fill/write/build. Niet overdrijven: zet het op ca. een kwart van de typoefeningen.
-
-## 5. Kaarten (uitleg in `learn`-lessen)
-
-Elke `learn`-les heeft `cards` (6 tot 7) en `quiz` (6 tot 7 oefeningen die precies toetsen wat de kaarten leerden). Kaartsoorten:
-
-```json
-{ "kind": "text", "title": "Zo groet je", "body": "Een **hoofdpunt** vet maken kan met dubbele sterretjes.\n- Lijstje met streepje\n- Tweede punt" }
-{ "kind": "examples", "title": "Voorbeelden", "intro": "Optionele inleiding", "items": [{ "es": "Buenos días.", "nl": "Goedemorgen." }] }
-{ "kind": "table", "title": "ser", "intro": "...", "head": ["persoon", "ser"], "rows": [["yo", "**soy**"], ["tú", "**eres**"]], "note": "Optionele voetnoot" }
-{ "kind": "tip", "tone": "tip", "title": "Weetje", "body": "..." }
-```
-
-- `examples` (min. 2 items, ideaal 3 tot 5): elk item krijgt een 🔊-knop. Gebruik ze **veel**: de gebruiker moet de zinnen horen. Elke nieuwe structuur krijgt minstens één `examples`-kaart met realistische zinnen uit een gesprek.
-- `table`: 2 tot 4 kolommen, rijen met evenveel cellen als kolommen. Voor vervoegingen: 6 rijen (yo, tú, él/ella/usted, nosotros/as, vosotros/as, ellos/ellas/ustedes). Maak de uitgang vet.
-- `tip` tonen: `"tip"` (💡), `"warn"` (⚠️ let op / valkuil), `"spain"` (🇪🇸 verschil of weetje over Spanje), `"police"` (👮 politiewerk, bv. een zin die je in je werk nodig hebt of een Nederlandse term met Spaanse tegenhanger).
-- Sla **geen kaartsoort** over: gebruik per les minstens één `examples`-kaart en (bij werkwoorden) een `table`-kaart. Houd tekst kort: een `text`-kaart max ca. 90 woorden. Een kaart = één idee. Eindig een uitlegles met een `tip`-kaart met een handig geheugensteuntje of valkuil.
-- Houd Nederlanders in gedachten: wijs op **valse vrienden** en typische Nederlandse fouten, maar alleen als je zeker van je zaak bent (bv. «embarazada» = zwanger, niet «beschaamd»; «constipado» = verkouden; «éxito» = succes, niet «uitgang»; «actualmente» = tegenwoordig/momenteel, niet «eigenlijk»), het weglaten van het werkwoord «ser/estar», de verplichte ¿ en ¡ en het vergeten van onderwerpsloze zinnen (in het Spaans mag *yo* vaak weg).
-- Opmaak in tekst: `**vet**`, regelafbreking `\n`, lijstjes met `- ` aan het begin van een regel. Geen HTML.
-
-## 6. Gesprekken (dialogue)
+### 4.1 Uitlegles (`learn`)
 
 ```json
 {
-  "kind": "dialogue", "title": "Een toerist helpt", "emoji": "🧳",
+  "kind": "learn",
+  "title": "Jezelf voorstellen",
+  "emoji": "👋",
+  "cards": [
+    { "kind": "text", "title": "Wat ga je leren?", "body": "In deze les leer je zeggen hoe je heet en waar je vandaan komt." },
+    { "kind": "examples", "title": "Zo stel je jezelf voor", "intro": "Tik op het luidsprekertje om te luisteren.",
+      "items": [ { "es": "Me llamo Pieter.", "nl": "Ik heet Pieter." }, { "es": "Soy de los Países Bajos.", "nl": "Ik kom uit Nederland." } ] },
+    { "kind": "table", "title": "ser (zijn)", "head": ["Wie", "Spaans", "Nederlands"],
+      "rows": [["yo", "**soy**", "ik ben"], ["tú", "**eres**", "jij bent"]],
+      "note": "Een persoonlijk voornaamwoord weglaten mag in het Spaans." },
+    { "kind": "tip", "tone": "spain", "body": "In Spanje zeg je vaak **vale** voor «oké»." }
+  ],
+  "quiz": [ "... 6 tot 7 oefeningen, zie 4.2 ..." ]
+}
+```
+
+- Kaartsoorten: `text` (body), `examples` (items met `es` en `nl`, minstens 2), `table` (`head` met 2 tot 4 kolommen, elke rij evenveel cellen), `tip` (`tone`: `tip`, `warn`, `spain`, `police`).
+- Elke kaart: maximaal ongeveer 110 woorden. Eén idee per kaart. Een tabel heeft maximaal 8 rijen.
+- Begin met een kaart «Wat ga je leren?» (het concrete doel), eindig met een `tip`-kaart (valkuil, Nederlandse interferentie, of Spaans-in-Spanje).
+- Elke Spaanse voorbeeldzin heeft een Nederlandse vertaling. Spaanse zinnen in `examples` worden voorgelezen door de app.
+- `tone: "police"` gebruik je voor werkcontext (bv. hoe je dit in een controle zegt). `tone: "spain"` voor een cultuur- of taalnoot over Spanje.
+
+### 4.2 De vijf oefenvormen
+
+**choice** (meerkeuze, 2 tot 5 opties):
+
+```json
+{ "type": "choice", "prompt": "Hoe zeg je «Ik heet Anna»?", "options": ["Me llamo Anna.", "Se llama Anna.", "Te llamas Anna."], "answer": 0,
+  "hint": "Het gaat om «ik».", "explain": "**Me llamo** = ik heet. Bij «jij» hoort **te llamas**, bij «hij/zij/u» **se llama**." }
+```
+
+Spaanse vraag, Nederlandse betekenis of Spaanse antwoorden (begrijpen):
+
+```json
+{ "type": "choice", "prompt": "¿De dónde es usted?", "promptLang": "es", "speak": "¿De dónde es usted?", "nl": "Waar komt u vandaan?",
+  "options": ["Soy de Utrecht.", "Tengo treinta años.", "Me llamo Eva."], "optionsNl": ["Ik kom uit Utrecht.", "Ik ben dertig jaar.", "Ik heet Eva."], "answer": 0 }
+```
+
+- `promptLang: "es"` en `speak` als de prompt Spaans is (dan komt er een luidsprekerknop).
+- `optionsLang: "nl"` als de opties Nederlands zijn (bv. «Wat betekent dit?»). Standaard zijn opties Spaans.
+- Bij Spaanse opties: geef `optionsNl` (vertaling per optie, zelfde volgorde). Verplicht in gesprekken, sterk aanbevolen elders.
+- Zet het goede antwoord niet steeds op dezelfde plek; verdeel `answer` over 0, 1, 2 (en 3).
+- Afleiders zijn plausibel (de typische fout), niet belachelijk.
+
+**fill** (één woord of woordgroep invullen, exact één `___`):
+
+```json
+{ "type": "fill", "sentence": "Nosotros ___ en Ámsterdam.", "answers": ["vivimos"], "base": "(vivir)", "nl": "Wij wonen in Amsterdam.",
+  "explain": "Bij **nosotros** eindigt een -ir-werkwoord op **-imos**.", "wrong": [{ "match": "vivemos", "feedback": "Bijna! Bij -ir-werkwoorden is het **-imos**, niet -emos." }] }
+```
+
+`answers`: alleen het ontbrekende stuk. `base`: kleine hulpregel (infinitief, persoon). Geef bij elke `fill` een `nl` en (`hint` of `base`).
+
+**build** (zin opbouwen uit woordblokjes):
+
+```json
+{ "type": "build", "prompt": "Zeg: «Ik woon in Utrecht.»", "words": ["Vivo", "en", "Utrecht", "vivimos", "soy"], "answers": ["Vivo en Utrecht"] }
+```
+
+- `words` = alle woorden (goede + maximaal 3 afleiders), één woord per blokje, 2 tot 12 woorden. Tekens als ¿ ? ! , horen bij het woord (`"¿Cómo"`, `"llamas?"`).
+- Elk geaccepteerd antwoord moet volledig uit `words` te bouwen zijn. Hoofdletters en leestekens tellen niet mee bij het nakijken.
+- Een onderwerpswoord (yo, tú ...) aan het begin is automatisch optioneel. Zet het dus **niet** in de woordenbank, tenzij de oefening juist over het voornaamwoord gaat.
+- Meerdere goede zinnen: zet ze alle in `answers` (de eerste is de modelzin).
+
+**write** (zelf een zin schrijven op basis van een Nederlandse opdracht):
+
+```json
+{ "type": "write", "prompt": "Zeg dat je Pieter heet en uit Nederland komt.",
+  "answers": ["Me llamo Pieter y soy de Holanda.", "Me llamo Pieter y soy de los Países Bajos.", "Me llamo Pieter y soy neerlandés."],
+  "hint": "Twee zinnen met **y** (en) ertussen.", "wrong": [{ "match": "soy llamo", "feedback": "Je mengt twee werkwoorden. Zeg **me llamo** voor je naam en **soy** voor je herkomst." }] }
+```
+
+Zet **alle** redelijke goede formuleringen in `answers` (met of zonder `usted`, synoniemen, verschillende volgorde). De leerder kan daarnaast zelf op «mijn antwoord was ook goed» tikken, maar hoe vollediger jij bent, hoe minder frustratie.
+
+**listen** (luisteren; niet toegestaan in een gesprek):
+
+```json
+{ "type": "listen", "mode": "choose", "es": "Buenas tardes, ¿cómo está usted?", "options": ["Buenas tardes, ¿cómo está usted?", "Buenas noches, ¿cómo está usted?", "Buenos días, ¿cómo estás?"], "answer": 0, "nl": "Goedemiddag, hoe gaat het met u?" }
+{ "type": "listen", "mode": "type", "es": "Me llamo Pablo.", "answers": ["Me llamo Pablo"], "nl": "Ik heet Pablo." }
+```
+
+`es` wordt voorgelezen en blijft verborgen tot het antwoord. `mode: "choose"`: de opties zijn Spaanse zinnen die lijken op elkaar (minimale verschillen die de leerder moet horen). `mode: "type"`: de leerder typt wat hij hoort; zet in `answers` de zin zoals gesproken (accenten en leestekens mogen ontbreken). Gebruik `type` vooral met korte zinnen (maximaal 10 woorden).
+Voor «wat betekent dit?» gebruik je `choice` met `speak` en `optionsLang: "nl"`.
+
+Gemeenschappelijke velden voor alle oefeningen:
+
+| veld | wat |
+|---|---|
+| `hint` | Nederlandse tip achter de 💡-knop. Verklap het antwoord niet, wijs de weg. (Zonder `hint` toont de app zelf het eerste woord van het antwoord bij fill/build/write.) |
+| `explain` | korte uitleg (1 tot 2 zinnen) na het antwoord. Bij grammatica: altijd invullen. |
+| `nl` | Nederlandse vertaling van de Spaanse zin in de opgave (🌐-knop). Altijd bij Spaanse zinnen. |
+| `wrong` | typische fouten: `{ "match": "stukje tekst", "feedback": "..." }`. `match` wordt vergeleken met het genormaliseerde (kleine letters, zonder accenten of leestekens) antwoord van de leerder, het moet daarin voorkomen. Zet geen `match` die ook in een goed antwoord kan voorkomen (het script controleert dat). 1 tot 3 per getypte oefening waar fouten voorspelbaar zijn. |
+| `strictSubject` | `true` alleen als het voornaamwoord bewust verplicht is (bv. oefening «yo of él?»). |
+
+### 4.3 Oefenles (`practice`) en toets (`test`)
+
+```json
+{ "kind": "practice", "title": "Oefen: jezelf voorstellen", "emoji": "✏️", "exercises": [ "... 12 tot 14 oefeningen ..." ] }
+```
+
+Een toets is hetzelfde met `"kind": "test"` en 18 tot 20 oefeningen. Mix de vormen goed: bij 14 oefeningen bijvoorbeeld 3 choice, 3 fill, 3 build, 3 write, 2 listen. Begin makkelijk, bouw op.
+
+### 4.4 Gesprek (`dialogue`)
+
+```json
+{
+  "kind": "dialogue",
+  "title": "Een toerist op het station",
+  "emoji": "🚉",
   "dialogue": {
-    "setting": "Je staat bij het Centraal Station in Ámsterdam. Een Spaanse toerist spreekt je aan.",
+    "setting": "Op het Centraal Station spreekt een Spaanse toerist je aan. Jij bent agent. Je spreekt met «usted».",
     "formal": "usted",
     "npcName": "Turista",
     "npcEmoji": "🧳",
     "tags": ["politie"],
     "turns": [
-      { "who": "npc", "es": "Perdone, ¿me puede ayudar?", "nl": "Pardon, kunt u mij helpen?" },
-      { "who": "you", "ex": { "type": "choice", "prompt": "Jij zegt: «Natuurlijk, waarmee kan ik u helpen?»",
-          "options": ["Claro, ¿en qué puedo ayudarle?", "No hablo español.", "Adiós."], "answer": 0,
-          "optionsNl": ["Natuurlijk, waarmee kan ik u helpen?", "Ik spreek geen Spaans.", "Dag."] } },
-      { "who": "npc", "es": "Busco la estación de tranvía.", "nl": "Ik zoek het tramstation." }
+      { "who": "npc", "es": "Buenos días, agente. ¿Me puede ayudar?", "nl": "Goedemorgen, agent. Kunt u mij helpen?" },
+      { "who": "you", "ex": { "type": "choice", "prompt": "Zeg: «Natuurlijk. Wat is het probleem?»",
+          "options": ["Claro. ¿Cuál es el problema?", "Me llamo Ana.", "Adiós."], "optionsNl": ["Natuurlijk. Wat is het probleem?", "Ik heet Ana.", "Tot ziens."], "answer": 0 } },
+      { "who": "npc", "es": "He perdido mi maleta.", "nl": "Ik ben mijn koffer kwijt." }
     ]
   }
 }
 ```
 
-- `formal`: `"usted"` (met publiek, slachtoffers, verdachten), `"tú"` (collega's, vrienden, kinderen), of `"mixed"`.
-- `tags`: `["politie"]` bij de politiegesprekken (les 9 van elk niveau en eventueel extra). Zonder tag voor de gewone gesprekken. 
-- Een gespreksbeurt van de gebruiker is een gewone oefening (`ex`), maar **zonder** `listen`. De prompt zegt wat de gebruiker moet bereiken, bv. «Jij vraagt hoe hij heet» of «Jij zegt dat je het gaat opschrijven» (Nederlands, of in latere niveaus ook eenvoudig Spaans). De app toont de laatste `npc`-regel boven de oefening.
-- **Opbouw in moeilijkheid (belangrijk!):**
-  - Niveau 1 en 2: alleen `choice` (3 opties, optionsNl verplicht) en `build` (korte zinnen).
-  - Niveau 3 tot 5: vooral `build` en `choice`, een paar korte `write` en `fill`.
-  - Niveau 6 tot 9: meerderheid `write` en `build`, af en toe `choice` en `fill`.
-  - Niveau 10 tot 13: bijna alles `write` (korte vrije antwoorden), een enkele `build`/`choice` als het onderwerp nieuw is.
-- Het gesprek moet **realistisch en samenhangend** zijn en volgt een duidelijke scène met een begin, een probleem en een afronding. Geen losse zinnetjes. De `npc` mag in het Spaans iets moeilijkere taal gebruiken dan de gebruiker zelf hoeft te produceren (met `nl`-vertaling), maar niet veel verder dan wat in dit en eerdere niveaus is behandeld.
-- Laat de gebruiker ook **begrijpen** wat gevraagd wordt: de npc stelt vragen, de gebruiker beantwoordt ze op inhoud (leeftijd, adres, wat er gebeurd is).
-- De gebruiker moet in een `write`-beurt vaak kunnen kiezen uit meer dan één goed antwoord; geef de varianten in `answers`. Vaak heeft een gespreksbeurt een persoonlijk feit nodig ("Ik heet ... "). Gebruik dan een vast gegeven in de opdracht: «Jij heet Pedro» of «Je bent 34 jaar». Zo is er één goed antwoord.
-- Elke `nl` bij `npc` is een natuurlijke Nederlandse vertaling.
+- `formal`: `"usted"`, `"tú"` of `"mixed"`. `tags`: `["politie"]` voor politiegesprekken (verplicht in les 9, optioneel in les 6 vanaf niveau 5).
+- `setting`: Nederlands, 1 tot 3 zinnen: waar ben je, wie is de ander, wat is jouw rol.
+- Een `you`-beurt bevat een gewone oefening (`ex`) van het type `choice`, `build`, `write` of `fill` (nooit `listen`). `prompt` is de Nederlandse opdracht: wat moet de leerder zeggen of doen («Zeg dat ...», «Vraag hoe ...»). De prompt verklapt het Spaans niet. De `npc`-regel erboven wordt in de app al getoond met speaker en vertaalknop.
+- **Opbouwend:** de manier van antwoorden wordt per niveau moeilijker (zie CURRICULUM): eerst antwoord **kiezen** (`choice`), dan zinnen **bouwen** (`build`), later zelf **typen** (`write`/`fill`).
+- De leerder moet kunnen volgen zonder woorden die niet geleerd zijn. De `npc` mag af en toe één nieuw woord gebruiken als de vertaling en de context het duidelijk maken (en de leerder het niet zelf hoeft te zeggen). In je `you`-antwoorden gebruik je alleen stof uit dit en eerdere niveaus.
+- Laat het gesprek een echt doel hebben en een natuurlijk einde (een oplossing, een afspraak, een afscheid). Geen losse zinnen aan elkaar.
+- Echte situaties tonen: de gesprekspartner reageert niet altijd precies zoals je verwacht (een wedervraag, een misverstand, «¿Puede repetir?»). Leer ook de reparatiezinnen: *No entiendo. ¿Puede repetir? Más despacio, por favor. ¿Cómo se dice ... en español?*
 
-## 7. Taal van de uitleg: Nederlands wordt geleidelijk Spaans
+## 5. Didactiek
 
-`instructionLang` in `meta.json` bepaalt de opdrachtregel boven oefeningen ("Elige la respuesta correcta" / "Kies het juiste antwoord"): `nl` in niveau 1 tot 3, `mix` (Spaans met Nederlands eronder) in niveau 4 tot 6, `es` (alleen Spaans) in niveau 7 tot 13.
+1. **Communicatief:** elke les heeft een concreet «ik kan ...»-doel. Grammatica dient het gesprek: leg uit wat de leerder nodig heeft, niet meer. Begin bij voorbeelden en patroon, pas daarna regel en uitzonderingen.
+2. **Opbouw:** gebruik alleen grammatica en woorden uit **eerdere niveaus en dit niveau** (zie CURRICULUM voor wat wanneer wordt geleerd). Nieuwe woorden: ongeveer 35 tot 45 per niveau, altijd geïntroduceerd in de uitlegkaarten (voorbeelden, tabel) voordat ze in oefeningen of gesprekken van de leerder voorkomen. Voor de `npc`-beurten geldt de uitzondering hierboven.
+3. **Herhaling:** gebruik kernzinnen en kernwerkwoorden uit eerdere niveaus telkens terug (bv. *¿Puede repetir?*, *Me llamo ...*, *¿Cómo se escribe?*).
+4. **Variatie en tempo:** wissel oefenvormen af. Maak de eerste oefening van een les makkelijk (herkenning), de laatste lastiger (productie). Geen twee dezelfde vormen achter elkaar als het kan.
+5. **Nederlandse interferentie:** benoem valkuilen: *ser/estar* (wij hebben maar één «zijn»), *tener* voor leeftijd, dubbele ontkenning, *hay* (er is/zijn), *jij/u* (tú/usted), werkwoordsuitgangen, valse vrienden (*sensible* = gevoelig, *embarazada* = zwanger, *actualmente* = nu, *eventualmente* = mogelijk, *carpeta* = map, *tarde* = laat / middag), geslacht van zelfstandige naamwoorden, bijvoeglijke naamwoorden komen meestal ná het zelfstandig naamwoord.
+6. **Uitspraak:** de app leest voor met een Spaanse (Spanje) stem. Gebruik veel luisteroefeningen vanaf niveau 1 en let op: z/c (Spanje: /θ/), j/g, ll, h (stom), v/b, rr, ñ, klemtoon.
+7. **Foutenmanagement:** leerders typen op een telefoon. Accenten, hoofdletters en leestekens tellen niet mee (de app kijkt dat ruim na), een tikfout geeft «bijna goed». Zet toch altijd de correcte accenten in je modelantwoorden. Een foute klemtoon of accent is nooit een apart «fout» in jouw oefeningen.
+8. **Correctheid boven alles:** schrijf alleen Spaans waarvan je 100% zeker bent (spelling, accenten, vervoeging, geslacht en getal, woordvolgorde, voorzetsels). Twijfel je, kies een eenvoudiger zin. Spaans in `answers` is ook voorbeeldmateriaal voor de leerder.
 
-Voor **jouw eigen tekst** (kaarten, `hint`, `explain`, prompts):
+## 6. Spaans uit Spanje
 
-| niveau | uitleg-taal |
-|---|---|
-| 1 tot 3 | Alles in het Nederlands. Spaans alleen in voorbeeldzinnen en antwoorden. |
-| 4 tot 6 | Nederlands, maar grammaticatermen krijgen de Spaanse naam erbij (bv. «de gebiedende wijs (*el imperativo*)»). Prompts in oefeningen blijven Nederlands. |
-| 7 tot 9 | Begin elke `text`-kaart en elke `explain` met één korte, eenvoudige Spaanse zin die de kern geeft, daarna de Nederlandse uitleg. Prompts van gespreksbeurten mogen deels Spaans zijn («Dile que...»). |
-| 10 tot 13 | Kaarten: 1 tot 2 korte, simpele Spaanse zinnen als samenvatting, daarna de Nederlandse uitleg (kort). `hint`/`explain` mogen Spaans zijn met een Nederlandse toelichting. Gespreksprompts bij voorkeur Spaans («Pídele que...», «Dile que...», «Pregunta si...») waar de gebruiker de betekenis kan raden, met `nl`-hulp. |
+- Aanspreken: **tú** (informeel) en **usted** (formeel) allebei vanaf niveau 1; het scenario bepaalt wat past. Politiecontact met het publiek is vrijwel altijd **usted**; met collega's en vrienden **tú**. Meervoud: **vosotros/vosotras** (informeel), **ustedes** (formeel). Presenteer vosotros als gewoon Spaans, niet als bijzaak.
+- Woordkeuze: *coche, ordenador, móvil, zumo, patata, piso, gafas, cazadora/chaqueta, aparcar, coger el autobús/el metro, billete, vale, guay, tío (informeel), vaya, ¡qué pena!, de nada, perdona/perdone*.
+- Verleden tijd: in Spanje gebruik je voor «vandaag/deze week/net» vaak het **pretérito perfecto** (*hoy he comido*), voor afgesloten tijd het **indefinido** (*ayer comí*). Volg dat.
+- Uitspraak-tip: z en c voor e/i als «th» (Spanje), niet als s. Alleen noemen waar het helpt.
+- Nederland in het Spaans: *los Países Bajos* (officieel), *Holanda* (gangbaar in Spanje), *neerlandés/neerlandesa* en *holandés/holandesa*, *Ámsterdam*, *La Haya* (Den Haag), *Róterdam*, *Utrecht*, *la policía neerlandesa*, *la comisaría* (politiebureau), *la bicicleta*, *el carril bici*, *la tarjeta de transporte*.
 
-De Nederlandse stijl: informeel (**je**, nooit «u»), vriendelijk, kort, concreet, geen wollige taal. Eén emoji per kaart is genoeg.
+## 7. Uitlegtaal per niveau: van Nederlands naar steeds meer Spaans
 
-## 8. Leerpad, bereik en afgesproken namen
+`instructionLang` in `meta.json` bepaalt de opdrachtregels («Kies het juiste antwoord» / «Elige la respuesta correcta»). Hou je uitleg daarbij in de pas:
 
-Gebruik in niveau N **alleen** grammatica en woorden uit niveau 1 tot en met N (zie 8.2). Nieuwe woorden **introduceer je in de kaarten** van dat niveau (examples/table). In een gesprek mag een `npc` een enkel onbekend woord gebruiken als het uit de context en de `nl`-vertaling duidelijk is, maar de gebruiker hoeft zelf alleen bekende taal te produceren. Geef elk niveau ca. 35 tot 45 nieuwe woorden/uitdrukkingen. Herhaal veel woorden en structuren uit eerdere niveaus (herhaling is belangrijk: laat de oefeningen en gesprekken oude stof terugbrengen, vooral werkwoorden in de tegenwoordige tijd).
+| Niveau | `instructionLang` | Kaarten, `hint` en `explain` |
+|---|---|---|
+| 1 tot 3 | `nl` | Volledig Nederlands; Spaans alleen in voorbeelden. |
+| 4 tot 6 | `mix` | Nederlands. Grammatica- en lesbegrippen tweetalig (*presente = tegenwoordige tijd*). Kaarttitels mogen een Spaanse titel + Nederlandse uitleg zijn. |
+| 7 tot 9 | `es` | Elke uitlegkaart begint met 1 of 2 heel eenvoudige Spaanse zinnen die de kern zeggen (met stof die de leerder kent), daarna de Nederlandse uitleg. |
+| 10 tot 13 | `es` | Uitlegkaarten: eerst korte Spaanse uitleg (B1-woorden uit eerdere niveaus), op een nieuwe regel `🇳🇱` + Nederlandse samenvatting. `hint`/`explain`: Spaans, met Nederlands tussen haakjes erachter. |
 
-### 8.1 Overzicht
+De prompts van oefeningen mogen vanaf niveau 4 steeds vaker Spaans zijn (met `nl` als vertaling), bv. «Completa con el verbo correcto».
 
-| N | titel (afgesproken) | focus | instructionLang | niveau-badge | politie-gesprek (les 9) |
-|---|---|---|---|---|---|
-| 1 | ¡Hola! | begroeten, jezelf voorstellen, spellen, tellen tot 20, ser, llamarse, nationaliteiten | nl | 🤝 Primer contacto | je stelt jezelf voor als agent en vraagt naam en nationaliteit (en laat de naam spellen) |
-| 2 | Mi mundo | lidwoorden, zelfstandige en bijvoeglijke naamwoorden, regelmatige werkwoorden, tener, tot 100, persoonsgegevens | nl | 🪪 Datos en regla | persoonsgegevens opnemen (naam, adres, telefoon, geboortedatum, leeftijd) |
-| 3 | Pedir y preguntar | vraagwoorden, estar/ser, hay, querer/poder, tijd en datum, prijzen, horeca en winkel | nl | 🎟️ Preguntón | een verdwaalde toerist: hotel, adres, wat is er aan de hand |
-| 4 | Mi día a día | dagindeling, reflexieve werkwoorden, onregelmatige tegenwoordige tijd, stamwisselaars, gustar, tener que | mix | ⏰ Rutina total | 's nachts iemand aanspreken: wat doet u hier, wie wacht u op, wanneer komt hij |
-| 5 | ¿Cómo llego? | stad en vervoer, plaatsvoorzetsels, **gebiedende wijs (bevestigend, usted en tú)** voor routebeschrijving | mix | 🧭 Sin perderse | een toerist de weg wijzen met de gebiedende wijs |
-| 6 | Planes y planes | ir a + infinitivo, plannen, weer, vergelijken, estar + gerundio, lo/la/los/las | mix | 📅 Con planes | geluidsoverlast / drukte bij een evenement: wat gebeurt er, wat ga ik doen |
-| 7 | ¿Qué ha pasado? | pretérito perfecto, participios, "me han robado", ya/todavía no | es | 🔎 Detective | **aangifte opnemen**: diefstal van tas, telefoon of portemonnee |
-| 8 | Ayer y antes | pretérito indefinido regelmatig en onregelmatig, hace + tijd | es | 📖 Narrador | getuigenverklaring over een ongeluk van gisteravond |
-| 9 | Cómo era | pretérito imperfecto, beschrijvingen, indefinido vs imperfecto | es | 🕵️ Retrato hablado | signalement van een verdachte (uiterlijk, kleding, auto, kenteken) |
-| 10 | Mañana y después | futuro simple, si + presente + futuro, procedures | es | 🔮 Futuro claro | het slachtoffer vertellen wat er na de aangifte gebeurt; een boete uitleggen |
-| 11 | ¡Alto! Órdenes | **gebiedende wijs compleet** (tú/usted/vosotros/ustedes, bevestigend en ontkennend, met voornaamwoorden), controle en aanhouding | es | 🛑 Voz de mando | verkeerscontrole en identiteitscontrole; aanhouding met de **rechten** (zwijgrecht, advocaat, tolk) |
-| 12 | ¿Podría ayudarme? | condicional, beleefd vragen en adviseren, de-escaleren | es | 🕊️ Mano izquierda | een ruzie of burenruzie de-escaleren |
-| 13 | Todo junto | **subjuntivo (basis)**: quiero que, necesito que, es importante que, cuando + subj; alle tijden combineren; begin B1 | es | 🎓 Casi B1 | noodsituatie: ongeval / vermist kind / huiselijke ruzie met meerdere stappen |
+## 8. Politie-inhoud
 
-### 8.2 Bereik per niveau (wat er nieuw is; wat in vorige niveaus stond mag je gebruiken)
+De gebruiker is agent in Nederland. De Spaanse zinnen moeten bruikbaar zijn in echte contacten met toeristen, expats en anderstaligen.
 
-**1 ¡Hola!** hola, adiós, buenos días/buenas tardes/buenas noches, hasta luego/mañana, por favor, gracias, de nada, perdón/perdone/lo siento, sí/no, ¿qué tal?, bien/mal/regular, mucho gusto/encantado(a); pronombres (yo, tú, él, ella, usted, nosotros/as, vosotros/as, ellos/as, ustedes); **ser** (hele tegenwoordige tijd); **llamarse** (me llamo, te llamas, se llama); ¿cómo te llamas?/¿cómo se llama (usted)?; ¿de dónde eres/es usted?; soy de...; landen (los Países Bajos/Holanda, España, Alemania, Francia, Italia, Bélgica, Portugal, Inglaterra/el Reino Unido); nationaliteiten (neerlandés/holandés(a), español(a), alemán/alemana, francés/francesa, italiano(a), belga, inglés/inglesa, portugués/portuguesa) en vorming van vrouwelijk; beroepen (policía, agente, turista, estudiante, médico/a, abogado/a, profesor(a)); getallen 0 tot 20; alfabet en uitspraak (b/v, c/z/qu, g/j, h stom, ll, ñ, rr, accenten); ¿cómo se escribe?, ¿puede repetir?, no entiendo, hablo un poco de español, más despacio, por favor; tú vs usted (kort).
+- Realistisch en beknopt: korte, duidelijke zinnen zoals een agent die gebruikt. Beleefd en professioneel (*usted*). Geen grappen met slachtoffers of verdachten.
+- Procedures zijn **Nederlands**: aangifte doen (*poner una denuncia*), proces-verbaal (*el acta / el atestado* mag, noem het «proces-verbaal» in de Nederlandse uitleg), identiteitscontrole, verkeerscontrole, aanhouding (*detener, queda detenido*), cautie (*tiene derecho a guardar silencio*, *a no declarar*, *a un abogado*, *a un intérprete*), bekeuring (*multa*). Verzin geen wettelijke details. Blijf bij algemene, juiste beweringen. Bij twijfel: laat de juridische precisie weg of formuleer algemeen. Voeg waar passend een `tip` met `tone: "police"` toe: «Dit is oefenmateriaal en geen officiële vertaling; gebruik bij officiële procedures een beëdigd tolk.»
+- Geen expliciet geweld of ander schokkends. Wel realistische noodsituaties (ongeluk, brand, vermist kind, ruzie, diefstal, bewusteloos), met rustige, bruikbare zinnen.
+- Neem per niveau (vanaf 3) minstens **4 oefeningen of gespreksbeurten** op waarin de leerder een **vraag van een Spaanstalige aan een agent** begrijpt (bv. *¿Dónde está la comisaría? ¿Puedo aparcar aquí? ¿Dónde puedo poner una denuncia? ¿Me puede ayudar? He perdido mi pasaporte. ¿Por qué me para? ¿Cuánto es la multa?*) en daar een passend antwoord op geeft.
+- Persoonsgegevens in voorbeelden zijn verzonnen en onschuldig (gewone namen, geen echte personen, geen echte nummers).
+- Gebruik de tag `"politie"` voor alle politiegesprekken.
 
-**2 Mi mundo** lidwoorden (el, la, los, las, un, una, unos, unas), geslacht en meervoud van zelfstandige naamwoorden, overeenkomst van bijvoeglijke naamwoorden (alto/a, bajo/a, joven, viejo/a, grande, pequeño/a, simpático/a, nuevo/a, casado/a, soltero/a); **regelmatige tegenwoordige tijd** -ar, -er, -ir (hablar, trabajar, estudiar, necesitar, ayudar, llamar, comer, beber, aprender, leer, vivir, escribir); **tener** (tengo, tienes, ...; tener ... años); ontkenning no; bezittelijke voornaamwoorden (mi, tu, su, nuestro); familie (padre, madre, hermano/a, hijo/a, marido, mujer/esposa, amigo/a, abuelo/a); casa, calle, ciudad, piso; getallen 21 tot 100; persoonsgegevens (nombre, apellido, dirección, número, teléfono, correo electrónico, fecha de nacimiento, edad, pasaporte, documento de identidad, carné de conducir); ¿cuál es...?, ¿cuántos años tiene?, ¿dónde vive?, ¿dónde trabaja?; vivo en, trabajo en; en (plaats), de (herkomst); y, o, pero, también.
+## 9. Kwaliteitschecklist (loop deze af voor je klaar bent)
 
-**3 Pedir y preguntar** vraagwoorden (qué, quién, dónde, cuándo, cómo, cuánto/a/os/as, por qué, cuál); **estar** (heel) en het verschil ser/estar (kenmerk/beroep/herkomst vs plaats/toestand); **hay**; **querer** en **poder** (heel, met stamwisseling als gewoon te leren patroon: quiero, queremos; puedo, podemos); necesitar; kunnen/willen + infinitief (¿puede ayudarme?, ¿me puede decir...?, quisiera als vaste uitdrukking); dagen, maanden, de klok (es la una, son las tres y media/cuarto/menos veinte), hoy/mañana, a las; getallen 100 tot 1000, prijzen (euros, céntimos, ¿cuánto cuesta?, caro/barato); eten en drinken (café, té, agua, cerveza, vino, bocadillo, tapa, ensalada, la cuenta, el menú), winkel (tienda, supermercado), plaatsen (estación, hotel, habitación, banco, hospital, comisaría); aquí/allí/ahí, cerca/lejos; ¿me puede repetir?; ¿puedo ver su pasaporte?; ¿en qué puedo ayudarle?
-
-**4 Mi día a día** reflexieve werkwoorden (levantarse, ducharse, vestirse, acostarse, llamarse); **onregelmatige tegenwoordige tijd**: ir, hacer, salir, venir, ver, saber, conocer, dar, poner, traer; **stamwisselaars** e>ie (empezar, entender, preferir, pensar), o>ue (volver, dormir, encontrar, recordar), e>i (pedir, seguir, repetir); gustar (me gusta/n, te gusta, le gusta); tener que + infinitivo; hay que; frequentie (siempre, a menudo, a veces, casi nunca, nunca, todos los días); dagdelen en diensten (turno de mañana/tarde/noche, de lunes a viernes); werk (oficina, comisaría, compañero/a, jefe/a, reunión, horario, trabajar de ... a ...); primero, luego, después, por fin; vrije tijd (leer, correr, cocinar, deporte, cine, música); ¿a qué hora...?; ¿qué hace usted aquí?
-
-**5 ¿Cómo llego?** stad (calle, plaza, esquina, semáforo, puente, parque, estación, parada, museo, banco, farmacia, hospital, correos, comisaría), vervoer (tren, autobús, tranvía, metro, bicicleta, taxi, aeropuerto, billete, tarjeta de transporte), richtingen (todo recto, a la derecha/izquierda, la primera/segunda calle, hasta el semáforo), werkwoorden (seguir, girar, cruzar, tomar/coger, bajar, subir, esperar, venir, ir), voorzetsels van plaats (cerca de, lejos de, enfrente de, al lado de, entre, detrás de, delante de, en la esquina), a pie/en coche/en bici; ordinales (primero ... quinto); **imperativo afirmativo**: usted (siga, gire, cruce, tome, coja, baje, suba, espere, venga, vaya, diga, mire, escuche, repita) en tú (sigue, gira, cruza, toma, coge, baja, sube, espera, ven, ve, di, mira, escucha, repite); por favor + imperativo; "está a cinco minutos".
-
-**6 Planes y planes** **ir a + infinitivo** (voy a, vas a...), plannen (viaje, vacaciones, fin de semana, cena, fiesta, concierto, quedar con, invitar, reservar), tijdsaanduidingen (mañana, pasado mañana, la semana que viene, el mes que viene, esta tarde, esta noche, el sábado), weer en seizoenen (hace sol/frío/calor, llueve, nieva, hay niebla; primavera, verano, otoño, invierno), vergelijkingen (más ... que, menos ... que, tan ... como, el más ..., mejor, peor), **estar + gerundio** (estoy hablando, están discutiendo; regelmatig en veel voorkomende onregelmatige: leyendo, durmiendo, diciendo), **lo/la/los/las** als lijdend voorwerp en me/te/le/nos als meewerkend voorwerp (basis, bij werkwoorden: ¿me ayuda?, lo veo, la llamo, le digo), porque, pero, entonces, mientras; evenement en overlast (ruido, vecino, música, multitud, manifestación, calle cortada, entrada, seguridad).
-
-**7 ¿Qué ha pasado?** **pretérito perfecto** (he, has, ha, hemos, habéis, han + participio; regelmatige en onregelmatige participios: hecho, dicho, visto, puesto, escrito, abierto, vuelto, roto, muerto), tijdsaanduidingen (hoy, esta mañana, esta tarde, esta semana, este año, ya, todavía no, nunca, alguna vez, siempre), acabar de + infinitivo, voorwerpen (cartera, bolso, mochila, móvil, llave, cámara, maleta, tarjeta, dinero, bicicleta, coche, documentos), werkwoorden (robar, perder, encontrar, romper, caerse, ocurrir/pasar, denunciar, ver, oír, llamar), misdrijf en aangifte (denuncia, denunciar, robo, hurto, ladrón/ladrona, testigo, víctima, herido/a, daño, comisaría, formulario, declaración, firmar), "me han robado la cartera", "he perdido", "¿qué ha pasado?", "¿lo ha visto?", "¿ha llamado a su banco?", "¿ha bloqueado la tarjeta?".
-
-**8 Ayer y antes** **pretérito indefinido**: regelmatig (-ar: -é, -aste, -ó, -amos, -asteis, -aron; -er/-ir: -í, -iste, -ió, -imos, -isteis, -ieron), **onregelmatig**: ser/ir (fui, fuiste, fue...), hacer, estar, tener, poder, poner, venir, decir, dar, ver, saber, querer, traer, e>i in -ir (pidió, durmió, siguió), -car/-gar/-zar (busqué, llegué, empecé), leer/oír (leyó, oyó); tijdsaanduidingen (ayer, anteayer, anoche, el lunes pasado, la semana pasada, el año pasado, hace dos días, en 2020, ese día, a las diez), volgorde van gebeurtenissen (primero, luego, después, entonces, de repente, al final); ongeval en getuigenis (accidente, choque, semáforo en rojo, velocidad, golpear, chocar, conducir, frenar, atropellar, ambulancia, herido, testigo, declaración, "¿qué vio?", "¿qué hizo?", "¿a qué hora ocurrió?").
-
-**9 Cómo era** **pretérito imperfecto** (-aba/-ía; ser: era, ir: iba, ver: veía), gebruik: beschrijvingen, gewoontes, achtergrond; **indefinido vs imperfecto** (cuando, mientras, de repente, siempre, todos los días), **estaba + gerundio**; uiterlijk (alto/bajo/mediano, delgado/robusto/gordo, joven/mayor, de unos treinta años, pelo corto/largo/rubio/moreno/castaño/pelirrojo, calvo, barba, bigote, gafas, cicatriz, tatuaje, ojos azules/marrones/verdes), kleding (chaqueta, camisa, camiseta, pantalones, vaqueros, jersey, sudadera, gorra, zapatos, zapatillas, abrigo, bufanda, mochila, bolsa), kleuren, auto (marca, modelo, color, matrícula, coche, moto, furgoneta, bici), llevaba, tenía, medía; richtingen van ontsnappen (huyó hacia, se fue por).
-
-**10 Mañana y después** **futuro simple** (regelmatig: -é, -ás, -á, -emos, -éis, -án; onregelmatig: tendré, podré, haré, diré, pondré, saldré, vendré, sabré, querré, habrá), si + presente + futuro, tijd (dentro de, el próximo/la próxima, en unos días, pronto, más tarde, mañana por la mañana), procedure (multa, informe, caso, investigación, juez, tribunal, fiscal, abogado, intérprete, citación, plazo, copia, número de caso, pagar, recibir, enviar, esperar, llamar, volver, firmar, declarar), "le llamaremos", "recibirá una carta", "tendrá que pagar", "se abrirá una investigación", zekerheid en vermoeden (probablemente, seguramente, quizá).
-
-**11 ¡Alto! Órdenes** **imperativo compleet**: afirmativo en negativo; tú (habla/no hables), usted (hable/no hable), vosotros (hablad/no habléis), ustedes (hablen/no hablen); onregelmatig (ven, haz, di, pon, sal, ten, ve, sé; venga, haga, diga, ponga, salga, tenga, vaya, sea); **voornaamwoorden bij het gebod** (dígame, deme, enséñeme, muéstreme, siéntese, cálmese, no se mueva, no lo toque, apártese, levante las manos, démelo); controle (documentación, permiso de conducir, seguro, matrícula, control de tráfico, alcoholemia, soplar, abrir, bajar la ventanilla, salir del vehículo, apagar el motor, aparcar, parar, quedarse, esperar, manos, bolsillos, registrar, arma, cuchillo, objetos); aanhouding (detener/detenido, esposas, ponerse las esposas, comisaría, "queda detenido", "no está obligado a decir nada" / "tiene derecho a guardar silencio", "tiene derecho a un abogado", "tiene derecho a un intérprete", "tiene derecho a avisar a su familia/consulado" alleen als je zeker bent, "¿entiende lo que le digo?").
-
-**12 ¿Podría ayudarme?** **condicional** (regelmatig -ía; onregelmatig zoals futuro: tendría, podría, haría, diría, pondría, saldría, vendría, sabría, querría, habría), beleefd verzoeken en aanbieden (¿podría...?, ¿me podría...?, ¿le importaría + inf.?, me gustaría, querría, quisiera, debería, tendría que, convendría, sería mejor), advies (yo en su lugar + condicional, yo que usted), voorstellen (podríamos, deberíamos), de-escaleren (calmarse, tranquilo/a, entiendo, comprendo, lo siento, vamos a solucionarlo, escúcheme, un momento), conflict (discutir, pelea, ruido, molestar, queja, vecinos, borracho/a, alcohol, droga, gritar, amenazar), "¿Podría hablar más bajo?", "¿Le importaría moverse?", "Le agradecería que...": alleen de vaste uitdrukking zonder verdere subjuntivo-uitleg.
-
-**13 Todo junto** **presente de subjuntivo** (regelmatig: hable, coma, viva; onregelmatig: sea, esté, vaya, tenga, haga, venga, diga, salga, ponga, sepa, pueda, quiera, dé), gebruik: quiero que, necesito que, espero que, le pido que, es importante/necesario/mejor que, no creo que, es posible que, cuando + subjuntivo (futuro), para que, antes de que; alle tijden combineren in een verhaal (presente, perfecto, indefinido, imperfecto, futuro, condicional); noodsituaties (accidente, incendio, herido, ambulancia, bomberos, desaparecido/a, niño perdido, violencia doméstica, discusión, amenaza, ayuda, urgente, tranquilícese, respire, quédese aquí); samenvattende gesprekken op B1-niveau met meerdere stappen.
-
-## 9. Kwaliteitseisen (lees dit goed)
-
-1. **Spaans moet 100% correct zijn.** Controleer elke vervoeging, elk accent, ¿ ¡ en overeenkomst van geslacht/getal. Eén fout in een leerapp is erger dan een ontbrekende oefening. Twijfel je aan een zin, kies een zin waar je zeker van bent.
-2. **Natuurlijk Spaans uit Spanje**, geen vertaalde Nederlandse zinnen. Zeg «¿Puede repetirlo, por favor?» en niet «¿Puede herhalar?».
-3. **Alle goede antwoorden in `answers`.** Denk aan synoniemen en beleefdheidsvarianten. Maar neem geen onjuist Spaans op.
-4. **Variatie in oefenvormen** binnen elke les (choice, fill, build, write, listen). Niet 12 keer hetzelfde type achter elkaar. Typoefeningen (fill/write) nemen toe naarmate het niveau stijgt.
-5. **Geen valse hints.** Een `hint` of `explain` moet kloppen en het antwoord niet weggeven.
-6. **Opbouw binnen een niveau:** les 1 introduceert, les 2 oefent dat, les 3 laat het in een gesprek gebruiken, les 4 introduceert het volgende onderdeel, enz.; les 8 en de toets mixen alles. Gebruik per niveau **minstens 4 verschillende gesprekssituaties**.
-7. **Politie-inhoud**: realistisch, beroepsmatig, respectvol; kies situaties die een Nederlandse agent echt tegenkomt (Spaanse toerist, student, expat, zakkenroller, fietsendiefstal, ongeval, geluidsoverlast, verkeerscontrole). Noem Nederlandse procedures alleen als je er zeker van bent; je hoeft geen wetsteksten na te bootsen. Hou het bij algemene, bekende zaken (identiteit controleren, aangifte opnemen, rechten voorlezen, boete uitleggen). Zet in `tip`-kaarten met `"tone": "police"` handige beroepszinnen. De politiegesprekken zijn **oefenmateriaal, geen officiële vertaling**.
-8. **Geen echte personen, kentekens of telefoonnummers.** Gebruik verzonnen namen (Carmen García, Javier Ruiz, Lucía Fernández, Pablo Navarro...) en duidelijk fictieve nummers en kentekens (bv. «06 00000000», «AB-123-C»).
-9. **Korte teksten.** Opgaven max ca. 25 woorden; `explain` max ca. 40 woorden; kaarten een idee per kaart.
-10. **Respect voor de leerling:** geen betuttelende toon, geen overdreven uitroeptekens. Af en toe een grapje of een leuk weetje over Spanje is prima.
-
-## 10. Afsluiten
-
-Als alles zonder fouten door de scripts komt, lees je de gegenereerde `levelNN.json` nog één keer na op Spaanse fouten (vooral accenten en werkwoordsvormen) en op consistentie met de afgesproken inhoud in 8.2. Meld in je eindbericht in 5 tot 8 regels: wat het niveau bevat, welke nieuwe woorden/structuren je geïntroduceerd hebt (korte lijst), welke twijfelgevallen je zag, en dat de scripts geen fouten geven.
+- [ ] 10 lessen in de juiste volgorde (3 learn, 3 practice, 3 dialogue, 1 test), aantallen volgens §3.
+- [ ] `node scripts/validate-content.mjs ...` en `tsx scripts/check-answers.ts ...` geven geen fouten.
+- [ ] Elke Spaanse zin gecontroleerd: spelling, accenten, vervoeging, geslacht en getal, Spaans uit Spanje.
+- [ ] Alleen stof uit dit en eerdere niveaus (zie CURRICULUM); nieuwe woorden eerst in de kaarten.
+- [ ] Elke getypte oefening heeft alle redelijke goede antwoorden; typische fouten hebben `wrong`.
+- [ ] Elke Spaanse zin in een opgave heeft een Nederlandse vertaling (`nl` of `optionsNl`).
+- [ ] Goede antwoorden zijn verdeeld over de opties; afleiders zijn plausibel.
+- [ ] Gesprekken hebben een doel en een natuurlijk einde, en de manier van antwoorden past bij het niveau (zie CURRICULUM).
+- [ ] Gebruik van uitlegtaal volgens §7.
+- [ ] Per niveau ≥ 4 «vraag van een Spaanstalige aan een agent» (vanaf niveau 3) en voldoende herhaling van eerdere niveaus.
