@@ -1,0 +1,163 @@
+{
+  "kind": "learn",
+  "title": "Spellen, getallen en «ik begrijp het niet»",
+  "emoji": "🔤",
+  "cards": [
+    {
+      "kind": "text",
+      "title": "Wat ga je leren?",
+      "body": "In deze les leer je het **alfabet**, je **naam spellen**, de **getallen van 0 tot 20** en wat je zegt als je iets **niet verstaat**.\n\nDat laatste is goud waard: met een paar vaste zinnen red je elk gesprek."
+    },
+    {
+      "kind": "table",
+      "title": "Het alfabet (A tot en met N)",
+      "intro": "Zo heten de letters. Het Spaanse alfabet heeft ook de letter **ñ**.",
+      "head": ["Letter", "Naam", "Letter", "Naam"],
+      "rows": [
+        ["A", "a", "H", "hache"],
+        ["B", "be", "I", "i"],
+        ["C", "ce", "J", "jota"],
+        ["D", "de", "K", "ka"],
+        ["E", "e", "L", "ele"],
+        ["F", "efe", "M", "eme"],
+        ["G", "ge", "N", "ene"]
+      ]
+    },
+    {
+      "kind": "table",
+      "title": "Het alfabet (Ñ tot en met Z)",
+      "head": ["Letter", "Naam", "Letter", "Naam"],
+      "rows": [
+        ["Ñ", "eñe", "T", "te"],
+        ["O", "o", "U", "u"],
+        ["P", "pe", "V", "uve"],
+        ["Q", "cu", "W", "uve doble"],
+        ["R", "erre", "X", "equis"],
+        ["S", "ese", "Y", "i griega"],
+        ["Z", "zeta", "", ""]
+      ],
+      "note": "De **h** spreek je niet uit: **hola** klinkt als «ola»."
+    },
+    {
+      "kind": "table",
+      "title": "Uitspraak: de lastige klanken",
+      "head": ["Letter", "Klinkt als", "Voorbeeld"],
+      "rows": [
+        ["j, en g voor e/i", "een harde ch (zoals in «lachen»)", "**jota**, **gente**"],
+        ["z, en c voor e/i", "«th» (zoals in het Engelse «think»)", "**zeta**, **gracias**"],
+        ["ll", "ongeveer «lj» of «j»", "**llamo**"],
+        ["ñ", "«nj»", "**señor**"],
+        ["qu", "een k", "**que**"],
+        ["v en b", "bijna hetzelfde, een zachte b", "**vino**, **bien**"],
+        ["rr", "een rollende r", "**perro**"],
+        ["h", "niet uitgesproken", "**hola**"]
+      ],
+      "note": "Spaans klinkt bijna zoals het geschreven wordt. Elke klinker heeft maar één klank."
+    },
+    {
+      "kind": "examples",
+      "title": "Je naam spellen",
+      "intro": "Als agent spel je namen de hele dag. Oefen dit goed.",
+      "items": [
+        { "es": "¿Cómo se escribe?", "nl": "Hoe schrijf je dat?" },
+        { "es": "Se escribe: ese, a, eme.", "nl": "Het wordt geschreven: S, A, M." },
+        { "es": "Se escribe con jota.", "nl": "Het wordt met een j geschreven." },
+        { "es": "Doble ele.", "nl": "Dubbel l." },
+        { "es": "¿Cómo se dice «bank» en español?", "nl": "Hoe zeg je «bank» in het Spaans?" }
+      ]
+    },
+    {
+      "kind": "table",
+      "title": "Getallen 0 tot 20",
+      "head": ["Getal", "Spaans", "Getal", "Spaans"],
+      "rows": [
+        ["0", "cero", "11", "once"],
+        ["1", "uno", "12", "doce"],
+        ["2", "dos", "13", "trece"],
+        ["3", "tres", "14", "catorce"],
+        ["4", "cuatro", "15", "quince"],
+        ["5", "cinco", "16", "dieciséis"],
+        ["6", "seis", "17", "diecisiete"],
+        ["7", "siete", "18", "dieciocho"],
+        ["8", "ocho", "19", "diecinueve"],
+        ["9", "nueve", "20", "veinte"],
+        ["10", "diez", "", ""]
+      ],
+      "note": "Vanaf 16 zijn het samengestelde woorden: **diez y seis** werd **dieciséis**."
+    },
+    {
+      "kind": "examples",
+      "title": "Als je het niet verstaat",
+      "intro": "Leer deze zinnen uit je hoofd. Je gebruikt ze in elk gesprek.",
+      "items": [
+        { "es": "No entiendo.", "nl": "Ik begrijp het niet." },
+        { "es": "¿Puede repetir, por favor?", "nl": "Kunt u het herhalen, alstublieft?" },
+        { "es": "Más despacio, por favor.", "nl": "Langzamer, alstublieft." },
+        { "es": "Hablo un poco de español.", "nl": "Ik spreek een beetje Spaans." },
+        { "es": "¿Cómo se dice «politie» en español?", "nl": "Hoe zeg je «politie» in het Spaans?" },
+        { "es": "¿Qué significa «comisaría»?", "nl": "Wat betekent «comisaría»?" }
+      ]
+    },
+    {
+      "kind": "tip",
+      "tone": "police",
+      "title": "Werk: namen spellen",
+      "body": "Bij een aangifte of controle moet je namen vaak laten spellen. Vraag dan: **¿Cómo se escribe?** Spaanse namen kennen **ll**, **ñ** en **j**. Spel de letters rustig na om zeker te zijn.\n\nDit is oefenmateriaal en geen officiële vertaling."
+    }
+  ],
+  "quiz": [
+    {
+      "type": "choice",
+      "prompt": "Luister en kies het getal.",
+      "speak": "siete",
+      "optionsLang": "nl",
+      "options": ["6", "7", "17"],
+      "answer": 1,
+      "explain": "**siete** = 7. Het getal **17** is **diecisiete**."
+    },
+    {
+      "type": "fill",
+      "sentence": "Tres, cuatro, ___, seis.",
+      "answers": ["cinco"],
+      "base": "(5)",
+      "nl": "Drie, vier, vijf, zes.",
+      "explain": "**cinco** = 5."
+    },
+    {
+      "type": "choice",
+      "prompt": "Hoe vraag je hoe je een woord schrijft?",
+      "options": ["¿Cómo se llama?", "¿Cómo se dice?", "¿Cómo se escribe?"],
+      "optionsNl": ["Hoe heet het?", "Hoe zeg je het?", "Hoe schrijf je het?"],
+      "answer": 2,
+      "explain": "**escribir** betekent schrijven. **¿Cómo se escribe?** = hoe schrijf je dat?"
+    },
+    {
+      "type": "build",
+      "prompt": "Zeg: «Ik begrijp het niet.»",
+      "words": ["No", "entiendo.", "Sí", "hablo"],
+      "answers": ["No entiendo."]
+    },
+    {
+      "type": "write",
+      "prompt": "Vraag beleefd of iemand het kan herhalen.",
+      "answers": ["¿Puede repetir, por favor?", "¿Puede repetir?", "¿Puedes repetir, por favor?", "¿Puedes repetir?"],
+      "hint": "Het eerste woord betekent «kunt u». Het tweede is «herhalen».",
+      "explain": "**¿Puede repetir?** is beleefd (usted). Tegen een vriend zeg je **¿Puedes repetir?**"
+    },
+    {
+      "type": "listen",
+      "mode": "type",
+      "es": "veinte",
+      "answers": ["veinte"],
+      "nl": "twintig"
+    },
+    {
+      "type": "choice",
+      "prompt": "Welke letter heet **jota**?",
+      "optionsLang": "nl",
+      "options": ["J", "H", "G"],
+      "answer": 0,
+      "explain": "De **j** heet **jota**. De **h** heet **hache** en wordt niet uitgesproken."
+    }
+  ]
+}

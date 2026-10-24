@@ -1,0 +1,91 @@
+{
+  "kind": "dialogue",
+  "title": "Inchecken in een hotel",
+  "emoji": "🏨",
+  "dialogue": {
+    "setting": "Je komt aan bij een hotel in Barcelona en loopt naar de receptie. De receptionist kent je niet en zegt «usted» tegen je. Jij zegt ook «usted». Je naam in dit gesprek is Sam Jansen.",
+    "formal": "usted",
+    "npcName": "Recepcionista",
+    "npcEmoji": "🛎️",
+    "turns": [
+      { "who": "npc", "es": "Buenas tardes, bienvenido.", "nl": "Goedemiddag, welkom." },
+      {
+        "who": "you",
+        "ex": {
+          "type": "choice",
+          "prompt": "Begroet de receptionist. Het is middag.",
+          "options": ["Hasta luego.", "Buenas tardes.", "Buenas noches."],
+          "optionsNl": ["Tot straks.", "Goedemiddag.", "Goedenavond."],
+          "answer": 1
+        }
+      },
+      { "who": "npc", "es": "¿Cómo está usted?", "nl": "Hoe gaat het met u?" },
+      {
+        "who": "you",
+        "ex": {
+          "type": "choice",
+          "prompt": "Zeg dat het heel goed gaat en vraag beleefd hoe het met de receptionist gaat.",
+          "options": ["Muy bien, gracias. ¿Y tú?", "Muy bien, gracias. ¿Y usted?", "Muy bien, gracias. ¿Cómo te llamas?"],
+          "optionsNl": ["Heel goed, dank je. En met jou?", "Heel goed, dank u. En met u?", "Heel goed, dank je. Hoe heet je?"],
+          "answer": 1,
+          "explain": "Je zegt **usted** tegen een vreemde: **¿Y usted?**"
+        }
+      },
+      { "who": "npc", "es": "Bien, gracias. ¿Cómo se llama usted?", "nl": "Goed, dank u. Hoe heet u?" },
+      {
+        "who": "you",
+        "ex": {
+          "type": "build",
+          "prompt": "Zeg dat je Sam Jansen heet.",
+          "words": ["Me", "llamo", "Sam", "Jansen.", "llama", "soy"],
+          "answers": ["Me llamo Sam Jansen."],
+          "hint": "Begin met **me llamo**."
+        }
+      },
+      { "who": "npc", "es": "Gracias, señor Jansen. ¿De dónde es usted?", "nl": "Dank u, meneer Jansen. Waar komt u vandaan?" },
+      {
+        "who": "you",
+        "ex": {
+          "type": "choice",
+          "prompt": "Zeg dat je uit Nederland komt.",
+          "options": ["Es de los Países Bajos.", "Soy de los Países Bajos.", "Me llamo los Países Bajos."],
+          "optionsNl": ["Hij komt uit Nederland.", "Ik kom uit Nederland.", "Ik heet Nederland."],
+          "answer": 1,
+          "explain": "Over jezelf zeg je **soy de ...**"
+        }
+      },
+      { "who": "npc", "es": "¡Ah, Holanda! ¿Es usted turista?", "nl": "Ah, Nederland! Bent u toerist?" },
+      {
+        "who": "you",
+        "ex": {
+          "type": "choice",
+          "prompt": "Zeg dat je geen toerist bent, maar politieagent.",
+          "options": ["Sí, soy policía.", "No, me llamo policía.", "No, soy policía."],
+          "optionsNl": ["Ja, ik ben politieagent.", "Nee, ik heet politieagent.", "Nee, ik ben politieagent."],
+          "answer": 2
+        }
+      },
+      { "who": "npc", "es": "¡Qué interesante! Un momento, por favor.", "nl": "Wat interessant! Een momentje, alstublieft." },
+      {
+        "who": "you",
+        "ex": {
+          "type": "choice",
+          "prompt": "Zeg dank je wel.",
+          "options": ["Gracias.", "De nada.", "Perdón."],
+          "optionsNl": ["Dank u.", "Graag gedaan.", "Pardon."],
+          "answer": 0
+        }
+      },
+      { "who": "npc", "es": "Aquí tiene su llave. Hasta luego, señor Jansen.", "nl": "Hier is uw sleutel. Tot straks, meneer Jansen." },
+      {
+        "who": "you",
+        "ex": {
+          "type": "build",
+          "prompt": "Bedank en neem afscheid: «Dank u. Tot straks.»",
+          "words": ["Gracias.", "Hasta", "luego.", "mañana.", "Perdón."],
+          "answers": ["Gracias. Hasta luego.", "Gracias. Hasta mañana."]
+        }
+      }
+    ]
+  }
+}

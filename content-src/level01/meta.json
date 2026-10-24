@@ -1,0 +1,14 @@
+{
+  "title": "Hola y presentarse",
+  "subtitle": "Begroeten en jezelf voorstellen",
+  "emoji": "👋",
+  "instructionLang": "nl",
+  "goals": [
+    "Je kunt iemand begroeten en afscheid nemen, met tú of usted",
+    "Je kunt zeggen hoe je heet, waar je vandaan komt en wat je doet",
+    "Je kunt vragen hoe iemand heet en waar iemand vandaan komt",
+    "Je kunt je naam spellen en getallen van 0 tot 20 zeggen",
+    "Je kunt om herhaling vragen als je iets niet verstaat"
+  ],
+  "badge": { "name": "Primer contacto", "emoji": "🤝", "desc": "Je kunt jezelf voorstellen en je naam spellen." }
+}

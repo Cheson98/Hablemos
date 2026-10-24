@@ -1,0 +1,156 @@
+{
+  "kind": "learn",
+  "title": "Jezelf voorstellen",
+  "emoji": "🪪",
+  "cards": [
+    {
+      "kind": "text",
+      "title": "Wat ga je leren?",
+      "body": "In deze les leer je zeggen **wie je bent**, **hoe je heet**, **waar je vandaan komt** en **wat je doet**. Daarvoor heb je twee werkwoorden nodig: **ser** (zijn) en **llamarse** (heten).\n\nIn het Spaans verandert het werkwoord mee met de persoon. Dat zie je in de tabellen hierna."
+    },
+    {
+      "kind": "table",
+      "title": "ser: zijn",
+      "head": ["Wie", "Spaans", "Nederlands"],
+      "rows": [
+        ["yo", "**soy**", "ik ben"],
+        ["tú", "**eres**", "jij bent"],
+        ["él / ella / usted", "**es**", "hij / zij / u is"],
+        ["nosotros / nosotras", "**somos**", "wij zijn"],
+        ["vosotros / vosotras", "**sois**", "jullie zijn"],
+        ["ellos / ellas / ustedes", "**son**", "zij / u (meervoud) zijn"]
+      ],
+      "note": "Het voornaamwoord mag je meestal weglaten: **Soy policía** betekent «ik ben politieagent». **Usted** is «u», **ustedes** is «u» of «jullie» in meervoud (formeel)."
+    },
+    {
+      "kind": "table",
+      "title": "llamarse: heten",
+      "head": ["Wie", "Spaans", "Nederlands"],
+      "rows": [
+        ["yo", "**me llamo**", "ik heet"],
+        ["tú", "**te llamas**", "jij heet"],
+        ["él / ella / usted", "**se llama**", "hij / zij / u heet"],
+        ["nosotros / nosotras", "**nos llamamos**", "wij heten"],
+        ["vosotros / vosotras", "**os llamáis**", "jullie heten"],
+        ["ellos / ellas / ustedes", "**se llaman**", "zij / u (meervoud) heten"]
+      ],
+      "note": "Letterlijk betekent **me llamo** «ik noem mezelf». Daarom staat er een klein woordje (me, te, se) voor."
+    },
+    {
+      "kind": "examples",
+      "title": "Vragen en antwoorden",
+      "intro": "Let op: een vraag begint met ¿ en eindigt met ?.",
+      "items": [
+        { "es": "¿Cómo te llamas?", "nl": "Hoe heet je?" },
+        { "es": "Me llamo Eva.", "nl": "Ik heet Eva." },
+        { "es": "¿Cómo se llama usted?", "nl": "Hoe heet u?" },
+        { "es": "¿De dónde eres?", "nl": "Waar kom je vandaan?" },
+        { "es": "¿De dónde es usted?", "nl": "Waar komt u vandaan?" },
+        { "es": "Soy de Utrecht.", "nl": "Ik kom uit Utrecht." },
+        { "es": "Soy de los Países Bajos.", "nl": "Ik kom uit Nederland." },
+        { "es": "Soy de Holanda.", "nl": "Ik kom uit Holland." }
+      ]
+    },
+    {
+      "kind": "table",
+      "title": "Landen en nationaliteiten",
+      "intro": "Je herkent de woorden vast. De vrouwelijke vorm eindigt meestal op **-a**.",
+      "head": ["Land", "Hij is ...", "Zij is ..."],
+      "rows": [
+        ["los Países Bajos", "neerlandés", "neerlandesa"],
+        ["España", "español", "española"],
+        ["Alemania", "alemán", "alemana"],
+        ["Francia", "francés", "francesa"],
+        ["Italia", "italiano", "italiana"],
+        ["Inglaterra", "inglés", "inglesa"],
+        ["Bélgica", "belga", "belga"],
+        ["Portugal", "portugués", "portuguesa"]
+      ],
+      "note": "Je hoort ook **Holanda** en **holandés / holandesa**. Dat is gewoon Spaans in Spanje. Nationaliteiten schrijf je met een kleine letter: **soy español**."
+    },
+    {
+      "kind": "examples",
+      "title": "Wat doe je? Beroepen",
+      "items": [
+        { "es": "Soy policía.", "nl": "Ik ben politieagent." },
+        { "es": "Soy agente de policía.", "nl": "Ik ben politieagent (agent van de politie)." },
+        { "es": "Es médica.", "nl": "Zij is arts." },
+        { "es": "Somos estudiantes.", "nl": "Wij zijn studenten." },
+        { "es": "Es camarero.", "nl": "Hij is ober." },
+        { "es": "Soy turista.", "nl": "Ik ben toerist." },
+        { "es": "Es abogada.", "nl": "Zij is advocaat." }
+      ]
+    },
+    {
+      "kind": "tip",
+      "tone": "tip",
+      "title": "Valkuil: no en geen «het»",
+      "body": "Ontkennen is makkelijk: zet **no** voor het werkwoord. **No soy español.** = Ik ben geen Spanjaard.\n\nHeet je in het Nederlands «ik ben Sam»? In het Spaans zeg je meestal **me llamo Sam**. **Soy Sam** kan ook, maar dan zeg je eerder wie je bent dan hoe je heet."
+    }
+  ],
+  "quiz": [
+    {
+      "type": "fill",
+      "sentence": "Yo ___ de Utrecht.",
+      "answers": ["soy"],
+      "base": "(ser, yo)",
+      "nl": "Ik kom uit Utrecht.",
+      "explain": "Bij **yo** hoort **soy**."
+    },
+    {
+      "type": "choice",
+      "prompt": "Hoe zeg je «Zij is Spaans»?",
+      "options": ["Ella es español.", "Ella es española.", "Ella son española."],
+      "answer": 1,
+      "explain": "Een vrouw is **española**, met **-a**. En bij **ella** hoort **es**."
+    },
+    {
+      "type": "fill",
+      "sentence": "¿Cómo ___ usted?",
+      "answers": ["se llama"],
+      "base": "(llamarse, usted)",
+      "nl": "Hoe heet u?",
+      "explain": "Bij **usted** gebruik je **se llama**.",
+      "wrong": [{ "match": "te llamas", "feedback": "**te llamas** hoort bij **tú**. Bij **usted** zeg je **se llama**." }]
+    },
+    {
+      "type": "build",
+      "prompt": "Vraag aan een vriend waar hij vandaan komt.",
+      "words": ["¿De", "dónde", "eres?", "es", "soy"],
+      "answers": ["¿De dónde eres?"]
+    },
+    {
+      "type": "choice",
+      "prompt": "¿De dónde es usted?",
+      "promptLang": "es",
+      "speak": "¿De dónde es usted?",
+      "nl": "Waar komt u vandaan?",
+      "options": ["Me llamo Eva.", "Muy bien, gracias.", "Soy de Alemania."],
+      "optionsNl": ["Ik heet Eva.", "Heel goed, dank u.", "Ik kom uit Duitsland."],
+      "answer": 2,
+      "explain": "Op de vraag «waar komt u vandaan?» antwoord je met **Soy de ...**"
+    },
+    {
+      "type": "fill",
+      "sentence": "Nosotros ___ de Holanda.",
+      "answers": ["somos"],
+      "base": "(ser, nosotros)",
+      "nl": "Wij komen uit Holland.",
+      "explain": "Bij **nosotros** hoort **somos**."
+    },
+    {
+      "type": "write",
+      "prompt": "Zeg dat je Sam heet en dat je politieagent bent.",
+      "answers": [
+        "Me llamo Sam y soy policía.",
+        "Me llamo Sam. Soy policía.",
+        "Soy Sam y soy policía.",
+        "Soy Sam. Soy policía.",
+        "Me llamo Sam y soy agente de policía.",
+        "Me llamo Sam. Soy agente de policía."
+      ],
+      "hint": "Twee zinnen of één zin met **y** (en) ertussen.",
+      "wrong": [{ "match": "soy llamo", "feedback": "Je mengt twee werkwoorden. Zeg **me llamo** voor je naam en **soy** voor je beroep of herkomst." }]
+    }
+  ]
+}

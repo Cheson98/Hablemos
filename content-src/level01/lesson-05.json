@@ -1,0 +1,123 @@
+{
+  "kind": "practice",
+  "title": "Oefen: jezelf voorstellen",
+  "emoji": "✏️",
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Hoe zeg je «Ik heet Anna»?",
+      "options": ["Te llamas Anna.", "Me llamo Anna.", "Se llama Anna."],
+      "optionsNl": ["Je heet Anna.", "Ik heet Anna.", "Zij heet Anna."],
+      "answer": 1,
+      "explain": "**Me llamo** = ik heet. **Te llamas** = jij heet. **Se llama** = hij, zij of u heet."
+    },
+    {
+      "type": "listen",
+      "mode": "choose",
+      "es": "Me llamo Pablo.",
+      "options": ["Se llama Pablo.", "Te llamas Pablo.", "Me llamo Pablo."],
+      "answer": 2,
+      "nl": "Ik heet Pablo."
+    },
+    {
+      "type": "fill",
+      "sentence": "Tú ___ de Alemania.",
+      "answers": ["eres"],
+      "base": "(ser, tú)",
+      "nl": "Jij komt uit Duitsland.",
+      "explain": "Bij **tú** hoort **eres**."
+    },
+    {
+      "type": "choice",
+      "prompt": "Wat betekent «¿De dónde eres?»?",
+      "optionsLang": "nl",
+      "options": ["Hoe heet je?", "Hoe gaat het met je?", "Waar kom je vandaan?"],
+      "answer": 2,
+      "explain": "**¿De dónde ...?** = waar ... vandaan? Het antwoord begint met **Soy de ...**"
+    },
+    {
+      "type": "build",
+      "prompt": "Zeg: «Zij is Frans.»",
+      "words": ["Ella", "es", "francesa.", "francés.", "soy"],
+      "answers": ["Ella es francesa."],
+      "explain": "Een vrouw is **francesa**. Bij **ella** hoort **es**."
+    },
+    {
+      "type": "write",
+      "prompt": "Zeg dat je uit Nederland komt.",
+      "answers": [
+        "Soy de los Países Bajos.",
+        "Soy de Holanda.",
+        "Soy neerlandés.",
+        "Soy neerlandesa.",
+        "Soy holandés.",
+        "Soy holandesa."
+      ],
+      "hint": "Gebruik **soy de ...** of **soy** + nationaliteit.",
+      "wrong": [{ "match": "me llamo", "feedback": "Met **me llamo** zeg je hoe je heet. Voor je herkomst gebruik je **soy**." }]
+    },
+    {
+      "type": "fill",
+      "sentence": "Vosotros ___ de Italia.",
+      "answers": ["sois"],
+      "base": "(ser, vosotros)",
+      "nl": "Jullie komen uit Italië.",
+      "explain": "Bij **vosotros** hoort **sois**."
+    },
+    {
+      "type": "choice",
+      "prompt": "Je vraagt een vreemde man hoe hij heet. Wat zeg je?",
+      "options": ["¿Cómo te llamas?", "¿Cómo se llama usted?", "¿De dónde eres?"],
+      "optionsNl": ["Hoe heet je?", "Hoe heet u?", "Waar kom je vandaan?"],
+      "answer": 1,
+      "explain": "Tegen een vreemde gebruik je **usted**: **¿Cómo se llama usted?**"
+    },
+    {
+      "type": "listen",
+      "mode": "type",
+      "es": "Soy de España.",
+      "answers": ["Soy de España."],
+      "nl": "Ik kom uit Spanje."
+    },
+    {
+      "type": "write",
+      "prompt": "Vraag aan een vriend hoe hij heet.",
+      "answers": ["¿Cómo te llamas?"],
+      "hint": "Tegen een vriend zeg je **tú**.",
+      "wrong": [{ "match": "se llama", "feedback": "**se llama** hoort bij **usted**. Tegen een vriend zeg je **te llamas**." }]
+    },
+    {
+      "type": "choice",
+      "prompt": "Hoe zeg je «Hij is Duits»?",
+      "options": ["Es alemán.", "Es alemana.", "Son alemán."],
+      "optionsNl": ["Hij is Duits.", "Zij is Duits.", "Zij zijn Duits."],
+      "answer": 0,
+      "explain": "Een man is **alemán**. Bij **él** hoort **es**."
+    },
+    {
+      "type": "fill",
+      "sentence": "Ella ___ médica.",
+      "answers": ["es"],
+      "base": "(ser, ella)",
+      "nl": "Zij is arts.",
+      "explain": "Bij **ella**, **él** en **usted** hoort **es**."
+    },
+    {
+      "type": "build",
+      "prompt": "Vraag beleefd: «Hoe gaat het met u?»",
+      "words": ["¿Cómo", "está", "usted?", "estás", "tú?"],
+      "answers": ["¿Cómo está usted?"]
+    },
+    {
+      "type": "write",
+      "prompt": "Stel jezelf voor: je heet Eva en je bent Duitse.",
+      "answers": [
+        "Me llamo Eva y soy alemana.",
+        "Me llamo Eva. Soy alemana.",
+        "Soy Eva y soy alemana.",
+        "Soy Eva. Soy alemana."
+      ],
+      "hint": "Eerst je naam, dan je nationaliteit. Een vrouw is **alemana**."
+    }
+  ]
+}

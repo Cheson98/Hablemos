@@ -1,0 +1,121 @@
+{
+  "kind": "practice",
+  "title": "Oefen: spellen, getallen en herhalen",
+  "emoji": "✏️",
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Wat betekent «No entiendo»?",
+      "optionsLang": "nl",
+      "options": ["Ik ben niet hier.", "Ik heet niet.", "Ik begrijp het niet."],
+      "answer": 2,
+      "explain": "**No entiendo** = ik begrijp het niet. Een goede zin om vaak te gebruiken."
+    },
+    {
+      "type": "listen",
+      "mode": "choose",
+      "es": "doce",
+      "options": ["dos", "doce", "diez"],
+      "answer": 1,
+      "nl": "twaalf"
+    },
+    {
+      "type": "fill",
+      "sentence": "Uno, dos, ___, cuatro.",
+      "answers": ["tres"],
+      "base": "(3)",
+      "nl": "Een, twee, drie, vier.",
+      "explain": "**tres** = 3."
+    },
+    {
+      "type": "build",
+      "prompt": "Vraag: «Kunt u het herhalen, alstublieft?»",
+      "words": ["¿Puede", "repetir,", "por", "favor?", "entiendo", "despacio"],
+      "answers": ["¿Puede repetir, por favor?"]
+    },
+    {
+      "type": "choice",
+      "prompt": "Welk getal is **quince**?",
+      "optionsLang": "nl",
+      "options": ["5", "15", "50"],
+      "answer": 1,
+      "explain": "**cinco** = 5, **quince** = 15."
+    },
+    {
+      "type": "write",
+      "prompt": "Vraag een vreemde (usted) hoe hij heet en waar hij vandaan komt.",
+      "answers": [
+        "¿Cómo se llama usted? ¿De dónde es usted?",
+        "¿Cómo se llama? ¿De dónde es?",
+        "¿Cómo se llama usted y de dónde es?"
+      ],
+      "hint": "Twee vragen achter elkaar. Beide met **usted**.",
+      "wrong": [{ "match": "te llamas", "feedback": "**te llamas** is voor **tú**. Tegen een vreemde zeg je **se llama**." }]
+    },
+    {
+      "type": "listen",
+      "mode": "type",
+      "es": "Me llamo Eva.",
+      "answers": ["Me llamo Eva."],
+      "nl": "Ik heet Eva."
+    },
+    {
+      "type": "choice",
+      "prompt": "Hoe zeg je «Langzamer, alstublieft»?",
+      "options": ["Hasta mañana, por favor.", "Más despacio, por favor.", "Un poco de español."],
+      "optionsNl": ["Tot morgen, alstublieft.", "Langzamer, alstublieft.", "Een beetje Spaans."],
+      "answer": 1
+    },
+    {
+      "type": "fill",
+      "sentence": "Yo ___ un poco de español.",
+      "answers": ["hablo"],
+      "base": "(hablar)",
+      "nl": "Ik spreek een beetje Spaans.",
+      "explain": "**hablo** = ik spreek. Je kent de zin **Hablo un poco de español** nu uit je hoofd."
+    },
+    {
+      "type": "write",
+      "prompt": "Zeg dat je een beetje Spaans spreekt.",
+      "answers": ["Hablo un poco de español."],
+      "hint": "Begin met **hablo**."
+    },
+    {
+      "type": "choice",
+      "prompt": "Wat betekent «Ella es alemana»?",
+      "optionsLang": "nl",
+      "options": ["Zij is Duitse.", "Hij is Duits.", "Zij heet Alemana."],
+      "answer": 0,
+      "explain": "**alemana** is de vrouwelijke vorm. Bij een man zeg je **alemán**."
+    },
+    {
+      "type": "build",
+      "prompt": "Spel de naam «Ana» (A-N-A).",
+      "words": ["a", "ene", "a", "be", "ese"],
+      "answers": ["a ene a"],
+      "explain": "A = **a**, N = **ene**. Dus A-N-A is **a, ene, a**."
+    },
+    {
+      "type": "fill",
+      "sentence": "Ellos ___ Pablo y Ana.",
+      "answers": ["se llaman"],
+      "base": "(llamarse, ellos)",
+      "nl": "Zij heten Pablo en Ana.",
+      "explain": "Bij **ellos**, **ellas** en **ustedes** hoort **se llaman**."
+    },
+    {
+      "type": "write",
+      "prompt": "Stel jezelf voor: je heet Sam, je komt uit Utrecht en je bent politieagent.",
+      "answers": [
+        "Me llamo Sam, soy de Utrecht y soy policía.",
+        "Me llamo Sam. Soy de Utrecht. Soy policía.",
+        "Me llamo Sam y soy de Utrecht. Soy policía.",
+        "Soy Sam, soy de Utrecht y soy policía.",
+        "Me llamo Sam, soy de Utrecht y soy agente de policía.",
+        "Me llamo Sam. Soy de Utrecht. Soy agente de policía."
+      ],
+      "hint": "Drie dingen: je naam (**me llamo**), je herkomst (**soy de**) en je beroep (**soy**).",
+      "wrong": [{ "match": "soy llamo", "feedback": "Je mengt twee werkwoorden. **Me llamo** voor je naam, **soy** voor herkomst en beroep." }]
+    }
+  ]
+}

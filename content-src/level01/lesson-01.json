@@ -1,0 +1,143 @@
+{
+  "kind": "learn",
+  "title": "Begroeten en afscheid nemen",
+  "emoji": "👋",
+  "cards": [
+    {
+      "kind": "text",
+      "title": "Wat ga je leren?",
+      "body": "In deze les leer je mensen **begroeten**, **afscheid nemen** en **bedanken**. Je hoort ook wanneer je **tú** (jij) en wanneer je **usted** (u) zegt.\n\nTip: tik bij elk voorbeeld op het luidsprekertje en zeg de zin hardop na."
+    },
+    {
+      "kind": "examples",
+      "title": "Begroeten",
+      "intro": "Welke groet je gebruikt, hangt af van het moment van de dag.",
+      "items": [
+        { "es": "Hola.", "nl": "Hallo." },
+        { "es": "Buenos días.", "nl": "Goedemorgen." },
+        { "es": "Buenas tardes.", "nl": "Goedemiddag." },
+        { "es": "Buenas noches.", "nl": "Goedenavond. / Goedenacht." }
+      ]
+    },
+    {
+      "kind": "examples",
+      "title": "Hoe gaat het?",
+      "intro": "Tegen een vriend zeg je ¿Cómo estás? Tegen een vreemde of oudere zeg je ¿Cómo está usted?",
+      "items": [
+        { "es": "¿Qué tal?", "nl": "Hoe gaat het?" },
+        { "es": "¿Cómo estás?", "nl": "Hoe gaat het met je?" },
+        { "es": "¿Cómo está usted?", "nl": "Hoe gaat het met u?" },
+        { "es": "Muy bien, gracias. ¿Y tú?", "nl": "Heel goed, dank je. En met jou?" },
+        { "es": "Bien, gracias. ¿Y usted?", "nl": "Goed, dank u. En met u?" },
+        { "es": "Regular.", "nl": "Zo-zo." },
+        { "es": "Mal.", "nl": "Slecht." }
+      ]
+    },
+    {
+      "kind": "examples",
+      "title": "Afscheid en beleefdheid",
+      "items": [
+        { "es": "Adiós.", "nl": "Tot ziens." },
+        { "es": "Hasta luego.", "nl": "Tot straks. / Tot ziens." },
+        { "es": "Hasta mañana.", "nl": "Tot morgen." },
+        { "es": "Gracias.", "nl": "Dank je. / Dank u." },
+        { "es": "Muchas gracias.", "nl": "Hartelijk bedankt." },
+        { "es": "De nada.", "nl": "Graag gedaan." },
+        { "es": "Por favor.", "nl": "Alsjeblieft. / Alstublieft." },
+        { "es": "Perdón.", "nl": "Sorry. / Pardon." },
+        { "es": "Lo siento.", "nl": "Het spijt me." }
+      ]
+    },
+    {
+      "kind": "examples",
+      "title": "Je naam zeggen: een eerste zin",
+      "intro": "Deze zinnen heb je meteen nodig. De uitleg komt in les 4.",
+      "items": [
+        { "es": "Me llamo Sam.", "nl": "Ik heet Sam." },
+        { "es": "¿Cómo te llamas?", "nl": "Hoe heet je?" },
+        { "es": "¿Cómo se llama usted?", "nl": "Hoe heet u?" },
+        { "es": "Mucho gusto.", "nl": "Aangenaam." }
+      ]
+    },
+    {
+      "kind": "table",
+      "title": "Tú of usted?",
+      "intro": "Het Spaans heeft twee vormen voor «jij» en «u». Dit is het verschil in de praktijk.",
+      "head": ["", "tú (jij)", "usted (u)"],
+      "rows": [
+        ["Tegen wie?", "vrienden, familie, collega's, kinderen", "vreemden, ouderen, klanten, bij je werk als agent"],
+        ["Hoe gaat het?", "¿Cómo estás?", "¿Cómo está usted?"],
+        ["Hoe heet je?", "¿Cómo te llamas?", "¿Cómo se llama usted?"],
+        ["Sorry", "Perdona.", "Perdone."]
+      ],
+      "note": "Twijfel je? Kies **usted**. Dat is nooit onbeleefd."
+    },
+    {
+      "kind": "tip",
+      "tone": "spain",
+      "title": "In Spanje",
+      "body": "Spanjaarden eten laat. Daarom zeg je **buenos días** tot ongeveer twee uur 's middags, **buenas tardes** tot het donker wordt en **buenas noches** daarna.\n\nIn winkels en cafés groet je bijna altijd even bij het binnenkomen."
+    }
+  ],
+  "quiz": [
+    {
+      "type": "choice",
+      "prompt": "Het is half negen 's ochtends. Wat zeg je?",
+      "options": ["Buenos días.", "Buenas noches.", "Adiós."],
+      "optionsNl": ["Goedemorgen.", "Goedenavond.", "Tot ziens."],
+      "answer": 0,
+      "explain": "**Buenos días** gebruik je 's ochtends en tot ongeveer twee uur 's middags."
+    },
+    {
+      "type": "choice",
+      "prompt": "¿Cómo estás?",
+      "promptLang": "es",
+      "speak": "¿Cómo estás?",
+      "nl": "Hoe gaat het met je?",
+      "options": ["Hasta mañana.", "Muy bien, gracias. ¿Y tú?", "De nada."],
+      "optionsNl": ["Tot morgen.", "Heel goed, dank je. En met jou?", "Graag gedaan."],
+      "answer": 1,
+      "explain": "Op een vraag naar hoe het gaat, geef je antwoord met **muy bien**, **bien**, **regular** of **mal**."
+    },
+    {
+      "type": "choice",
+      "prompt": "Je spreekt een oudere vreemde man aan. Wat vraag je?",
+      "options": ["¿Cómo estás?", "Hasta luego.", "¿Cómo está usted?"],
+      "optionsNl": ["Hoe gaat het met je?", "Tot straks.", "Hoe gaat het met u?"],
+      "answer": 2,
+      "explain": "Tegen een vreemde of oudere persoon gebruik je **usted**: **¿Cómo está usted?**"
+    },
+    {
+      "type": "fill",
+      "sentence": "Buenas ___, ¿cómo está usted?",
+      "answers": ["tardes"],
+      "base": "(goedemiddag)",
+      "nl": "Goedemiddag, hoe gaat het met u?",
+      "explain": "**Buenas tardes** = goedemiddag. Let op: **tardes** staat in het meervoud.",
+      "wrong": [{ "match": "dias", "feedback": "**días** hoort bij de ochtend (buenos días). Voor de middag zeg je **tardes**." }]
+    },
+    {
+      "type": "build",
+      "prompt": "Zeg: «Goedenacht. Tot morgen.»",
+      "words": ["Buenas", "noches.", "Hasta", "mañana.", "días", "luego"],
+      "answers": ["Buenas noches. Hasta mañana."],
+      "explain": "**Hasta mañana** = tot morgen. **Hasta luego** = tot straks."
+    },
+    {
+      "type": "write",
+      "prompt": "Vraag beleefd hoe het met iemand gaat (u).",
+      "answers": ["¿Cómo está usted?", "¿Cómo está?"],
+      "hint": "Gebruik de vorm met **está** (zonder s).",
+      "explain": "Bij **usted** zeg je **está**. Bij **tú** zeg je **estás**.",
+      "wrong": [{ "match": "estas", "feedback": "**estás** (met s) hoort bij **tú**. Bij **usted** is het **está**." }]
+    },
+    {
+      "type": "listen",
+      "mode": "choose",
+      "es": "Buenas tardes.",
+      "options": ["Buenas tardes.", "Buenas noches.", "Buenos días."],
+      "answer": 0,
+      "nl": "Goedemiddag."
+    }
+  ]
+}

@@ -1,0 +1,2541 @@
+{
+ "n": 1,
+ "id": "L01",
+ "title": "Hola y presentarse",
+ "subtitle": "Begroeten en jezelf voorstellen",
+ "emoji": "👋",
+ "instructionLang": "nl",
+ "goals": [
+  "Je kunt iemand begroeten en afscheid nemen, met tú of usted",
+  "Je kunt zeggen hoe je heet, waar je vandaan komt en wat je doet",
+  "Je kunt vragen hoe iemand heet en waar iemand vandaan komt",
+  "Je kunt je naam spellen en getallen van 0 tot 20 zeggen",
+  "Je kunt om herhaling vragen als je iets niet verstaat"
+ ],
+ "badge": {
+  "name": "Primer contacto",
+  "emoji": "🤝",
+  "desc": "Je kunt jezelf voorstellen en je naam spellen."
+ },
+ "lessons": [
+  {
+   "kind": "learn",
+   "title": "Begroeten en afscheid nemen",
+   "emoji": "👋",
+   "cards": [
+    {
+     "kind": "text",
+     "title": "Wat ga je leren?",
+     "body": "In deze les leer je mensen **begroeten**, **afscheid nemen** en **bedanken**. Je hoort ook wanneer je **tú** (jij) en wanneer je **usted** (u) zegt.\n\nTip: tik bij elk voorbeeld op het luidsprekertje en zeg de zin hardop na."
+    },
+    {
+     "kind": "examples",
+     "title": "Begroeten",
+     "intro": "Welke groet je gebruikt, hangt af van het moment van de dag.",
+     "items": [
+      {
+       "es": "Hola.",
+       "nl": "Hallo."
+      },
+      {
+       "es": "Buenos días.",
+       "nl": "Goedemorgen."
+      },
+      {
+       "es": "Buenas tardes.",
+       "nl": "Goedemiddag."
+      },
+      {
+       "es": "Buenas noches.",
+       "nl": "Goedenavond. / Goedenacht."
+      }
+     ]
+    },
+    {
+     "kind": "examples",
+     "title": "Hoe gaat het?",
+     "intro": "Tegen een vriend zeg je ¿Cómo estás? Tegen een vreemde of oudere zeg je ¿Cómo está usted?",
+     "items": [
+      {
+       "es": "¿Qué tal?",
+       "nl": "Hoe gaat het?"
+      },
+      {
+       "es": "¿Cómo estás?",
+       "nl": "Hoe gaat het met je?"
+      },
+      {
+       "es": "¿Cómo está usted?",
+       "nl": "Hoe gaat het met u?"
+      },
+      {
+       "es": "Muy bien, gracias. ¿Y tú?",
+       "nl": "Heel goed, dank je. En met jou?"
+      },
+      {
+       "es": "Bien, gracias. ¿Y usted?",
+       "nl": "Goed, dank u. En met u?"
+      },
+      {
+       "es": "Regular.",
+       "nl": "Zo-zo."
+      },
+      {
+       "es": "Mal.",
+       "nl": "Slecht."
+      }
+     ]
+    },
+    {
+     "kind": "examples",
+     "title": "Afscheid en beleefdheid",
+     "items": [
+      {
+       "es": "Adiós.",
+       "nl": "Tot ziens."
+      },
+      {
+       "es": "Hasta luego.",
+       "nl": "Tot straks. / Tot ziens."
+      },
+      {
+       "es": "Hasta mañana.",
+       "nl": "Tot morgen."
+      },
+      {
+       "es": "Gracias.",
+       "nl": "Dank je. / Dank u."
+      },
+      {
+       "es": "Muchas gracias.",
+       "nl": "Hartelijk bedankt."
+      },
+      {
+       "es": "De nada.",
+       "nl": "Graag gedaan."
+      },
+      {
+       "es": "Por favor.",
+       "nl": "Alsjeblieft. / Alstublieft."
+      },
+      {
+       "es": "Perdón.",
+       "nl": "Sorry. / Pardon."
+      },
+      {
+       "es": "Lo siento.",
+       "nl": "Het spijt me."
+      }
+     ]
+    },
+    {
+     "kind": "examples",
+     "title": "Je naam zeggen: een eerste zin",
+     "intro": "Deze zinnen heb je meteen nodig. De uitleg komt in les 4.",
+     "items": [
+      {
+       "es": "Me llamo Sam.",
+       "nl": "Ik heet Sam."
+      },
+      {
+       "es": "¿Cómo te llamas?",
+       "nl": "Hoe heet je?"
+      },
+      {
+       "es": "¿Cómo se llama usted?",
+       "nl": "Hoe heet u?"
+      },
+      {
+       "es": "Mucho gusto.",
+       "nl": "Aangenaam."
+      }
+     ]
+    },
+    {
+     "kind": "table",
+     "title": "Tú of usted?",
+     "intro": "Het Spaans heeft twee vormen voor «jij» en «u». Dit is het verschil in de praktijk.",
+     "head": [
+      "",
+      "tú (jij)",
+      "usted (u)"
+     ],
+     "rows": [
+      [
+       "Tegen wie?",
+       "vrienden, familie, collega's, kinderen",
+       "vreemden, ouderen, klanten, bij je werk als agent"
+      ],
+      [
+       "Hoe gaat het?",
+       "¿Cómo estás?",
+       "¿Cómo está usted?"
+      ],
+      [
+       "Hoe heet je?",
+       "¿Cómo te llamas?",
+       "¿Cómo se llama usted?"
+      ],
+      [
+       "Sorry",
+       "Perdona.",
+       "Perdone."
+      ]
+     ],
+     "note": "Twijfel je? Kies **usted**. Dat is nooit onbeleefd."
+    },
+    {
+     "kind": "tip",
+     "tone": "spain",
+     "title": "In Spanje",
+     "body": "Spanjaarden eten laat. Daarom zeg je **buenos días** tot ongeveer twee uur 's middags, **buenas tardes** tot het donker wordt en **buenas noches** daarna.\n\nIn winkels en cafés groet je bijna altijd even bij het binnenkomen."
+    }
+   ],
+   "quiz": [
+    {
+     "type": "choice",
+     "prompt": "Het is half negen 's ochtends. Wat zeg je?",
+     "options": [
+      "Buenos días.",
+      "Buenas noches.",
+      "Adiós."
+     ],
+     "optionsNl": [
+      "Goedemorgen.",
+      "Goedenavond.",
+      "Tot ziens."
+     ],
+     "answer": 0,
+     "explain": "**Buenos días** gebruik je 's ochtends en tot ongeveer twee uur 's middags.",
+     "id": "L01-01-q1"
+    },
+    {
+     "type": "choice",
+     "prompt": "¿Cómo estás?",
+     "promptLang": "es",
+     "speak": "¿Cómo estás?",
+     "nl": "Hoe gaat het met je?",
+     "options": [
+      "Hasta mañana.",
+      "Muy bien, gracias. ¿Y tú?",
+      "De nada."
+     ],
+     "optionsNl": [
+      "Tot morgen.",
+      "Heel goed, dank je. En met jou?",
+      "Graag gedaan."
+     ],
+     "answer": 1,
+     "explain": "Op een vraag naar hoe het gaat, geef je antwoord met **muy bien**, **bien**, **regular** of **mal**.",
+     "id": "L01-01-q2"
+    },
+    {
+     "type": "choice",
+     "prompt": "Je spreekt een oudere vreemde man aan. Wat vraag je?",
+     "options": [
+      "¿Cómo estás?",
+      "Hasta luego.",
+      "¿Cómo está usted?"
+     ],
+     "optionsNl": [
+      "Hoe gaat het met je?",
+      "Tot straks.",
+      "Hoe gaat het met u?"
+     ],
+     "answer": 2,
+     "explain": "Tegen een vreemde of oudere persoon gebruik je **usted**: **¿Cómo está usted?**",
+     "id": "L01-01-q3"
+    },
+    {
+     "type": "fill",
+     "sentence": "Buenas ___, ¿cómo está usted?",
+     "answers": [
+      "tardes"
+     ],
+     "base": "(goedemiddag)",
+     "nl": "Goedemiddag, hoe gaat het met u?",
+     "explain": "**Buenas tardes** = goedemiddag. Let op: **tardes** staat in het meervoud.",
+     "wrong": [
+      {
+       "match": "dias",
+       "feedback": "**días** hoort bij de ochtend (buenos días). Voor de middag zeg je **tardes**."
+      }
+     ],
+     "id": "L01-01-q4"
+    },
+    {
+     "type": "build",
+     "prompt": "Zeg: «Goedenacht. Tot morgen.»",
+     "words": [
+      "Buenas",
+      "noches.",
+      "Hasta",
+      "mañana.",
+      "días",
+      "luego"
+     ],
+     "answers": [
+      "Buenas noches. Hasta mañana."
+     ],
+     "explain": "**Hasta mañana** = tot morgen. **Hasta luego** = tot straks.",
+     "id": "L01-01-q5"
+    },
+    {
+     "type": "write",
+     "prompt": "Vraag beleefd hoe het met iemand gaat (u).",
+     "answers": [
+      "¿Cómo está usted?",
+      "¿Cómo está?"
+     ],
+     "hint": "Gebruik de vorm met **está** (zonder s).",
+     "explain": "Bij **usted** zeg je **está**. Bij **tú** zeg je **estás**.",
+     "wrong": [
+      {
+       "match": "estas",
+       "feedback": "**estás** (met s) hoort bij **tú**. Bij **usted** is het **está**."
+      }
+     ],
+     "id": "L01-01-q6"
+    },
+    {
+     "type": "listen",
+     "mode": "choose",
+     "es": "Buenas tardes.",
+     "options": [
+      "Buenas tardes.",
+      "Buenas noches.",
+      "Buenos días."
+     ],
+     "answer": 0,
+     "nl": "Goedemiddag.",
+     "id": "L01-01-q7"
+    }
+   ],
+   "id": "L01-01"
+  },
+  {
+   "kind": "practice",
+   "title": "Oefen: begroeten",
+   "emoji": "✏️",
+   "exercises": [
+    {
+     "type": "choice",
+     "prompt": "Wat betekent «Hasta luego»?",
+     "optionsLang": "nl",
+     "options": [
+      "Goedemorgen",
+      "Tot straks / tot ziens",
+      "Graag gedaan"
+     ],
+     "answer": 1,
+     "explain": "**Hasta luego** gebruik je als je elkaar later nog ziet of gewoon als «tot ziens».",
+     "id": "L01-02-e1"
+    },
+    {
+     "type": "listen",
+     "mode": "choose",
+     "es": "Buenos días.",
+     "options": [
+      "Buenas tardes.",
+      "Buenos días.",
+      "Buenas noches."
+     ],
+     "answer": 1,
+     "nl": "Goedemorgen.",
+     "id": "L01-02-e2"
+    },
+    {
+     "type": "choice",
+     "prompt": "Het is elf uur 's avonds. Wat zeg je als je binnenkomt?",
+     "options": [
+      "Buenos días.",
+      "Hasta mañana.",
+      "Buenas noches."
+     ],
+     "optionsNl": [
+      "Goedemorgen.",
+      "Tot morgen.",
+      "Goedenavond."
+     ],
+     "answer": 2,
+     "explain": "Als het donker is, zeg je **buenas noches**.",
+     "id": "L01-02-e3"
+    },
+    {
+     "type": "fill",
+     "sentence": "Buenos ___.",
+     "answers": [
+      "días"
+     ],
+     "base": "(goedemorgen)",
+     "nl": "Goedemorgen.",
+     "explain": "**Buenos días** staat in het meervoud, net als **buenas tardes**.",
+     "id": "L01-02-e4"
+    },
+    {
+     "type": "choice",
+     "prompt": "Je praat met een goede vriend. Wat vraag je?",
+     "options": [
+      "¿Cómo está usted?",
+      "¿Cómo estás?",
+      "Muchas gracias."
+     ],
+     "optionsNl": [
+      "Hoe gaat het met u?",
+      "Hoe gaat het met je?",
+      "Hartelijk bedankt."
+     ],
+     "answer": 1,
+     "explain": "Tegen een vriend gebruik je **tú**: **¿Cómo estás?**",
+     "id": "L01-02-e5"
+    },
+    {
+     "type": "build",
+     "prompt": "Zeg: «Tot morgen.»",
+     "words": [
+      "Hasta",
+      "mañana.",
+      "luego",
+      "días"
+     ],
+     "answers": [
+      "Hasta mañana."
+     ],
+     "id": "L01-02-e6"
+    },
+    {
+     "type": "choice",
+     "prompt": "Muy bien, gracias. ¿Y usted?",
+     "promptLang": "es",
+     "speak": "Muy bien, gracias. ¿Y usted?",
+     "nl": "Heel goed, dank u. En u?",
+     "options": [
+      "Bien, gracias.",
+      "Hasta luego.",
+      "Perdone."
+     ],
+     "optionsNl": [
+      "Goed, dank u.",
+      "Tot straks.",
+      "Pardon."
+     ],
+     "answer": 0,
+     "explain": "Op «¿Y usted?» antwoord je kort over jezelf: **Bien, gracias.**",
+     "id": "L01-02-e7"
+    },
+    {
+     "type": "write",
+     "prompt": "Bedank iemand: «Hartelijk bedankt.»",
+     "answers": [
+      "Muchas gracias."
+     ],
+     "hint": "Twee woorden. Het eerste betekent «veel».",
+     "explain": "**Gracias** = dank je. **Muchas gracias** = hartelijk bedankt.",
+     "id": "L01-02-e8"
+    },
+    {
+     "type": "listen",
+     "mode": "type",
+     "es": "Hasta mañana.",
+     "answers": [
+      "Hasta mañana."
+     ],
+     "nl": "Tot morgen.",
+     "id": "L01-02-e9"
+    },
+    {
+     "type": "choice",
+     "prompt": "Je botst per ongeluk tegen iemand aan. Wat zeg je?",
+     "options": [
+      "De nada.",
+      "Perdón.",
+      "Hasta luego."
+     ],
+     "optionsNl": [
+      "Graag gedaan.",
+      "Sorry.",
+      "Tot straks."
+     ],
+     "answer": 1,
+     "explain": "**Perdón** gebruik je om sorry te zeggen. **De nada** zeg je als iemand jou bedankt.",
+     "id": "L01-02-e10"
+    },
+    {
+     "type": "fill",
+     "sentence": "¿Cómo ___?",
+     "answers": [
+      "estás"
+     ],
+     "base": "(tegen een vriend)",
+     "nl": "Hoe gaat het met je?",
+     "explain": "Bij **tú** eindigt het werkwoord op **-s**: **estás**. Bij **usted** is het **está**.",
+     "id": "L01-02-e11"
+    },
+    {
+     "type": "build",
+     "prompt": "Zeg: «Heel goed, dank u.»",
+     "words": [
+      "Muy",
+      "bien,",
+      "gracias.",
+      "mal",
+      "de",
+      "nada."
+     ],
+     "answers": [
+      "Muy bien, gracias."
+     ],
+     "id": "L01-02-e12"
+    },
+    {
+     "type": "write",
+     "prompt": "Zeg «Goedemiddag» en vraag beleefd hoe het gaat (u).",
+     "answers": [
+      "Buenas tardes. ¿Cómo está usted?",
+      "Buenas tardes, ¿cómo está usted?",
+      "Buenas tardes. ¿Cómo está?",
+      "Buenas tardes, ¿cómo está?"
+     ],
+     "hint": "Begin met de groet voor de middag, daarna de vraag.",
+     "wrong": [
+      {
+       "match": "dias",
+       "feedback": "**días** hoort bij de ochtend. Voor de middag zeg je **buenas tardes**."
+      }
+     ],
+     "id": "L01-02-e13"
+    },
+    {
+     "type": "listen",
+     "mode": "choose",
+     "es": "¿Cómo está usted?",
+     "options": [
+      "¿Cómo estás?",
+      "¿Cómo está usted?",
+      "¿Qué tal?"
+     ],
+     "answer": 1,
+     "nl": "Hoe gaat het met u?",
+     "id": "L01-02-e14"
+    }
+   ],
+   "id": "L01-02"
+  },
+  {
+   "kind": "dialogue",
+   "title": "Een gesprek in een tapasbar",
+   "emoji": "🍷",
+   "dialogue": {
+    "setting": "Het is avond. Je zit in een tapasbar in Madrid. Naast je zit Lucía, een Spaanse vrouw van jouw leeftijd. Jullie zeggen «tú» tegen elkaar. Jij heet in dit gesprek Sam.",
+    "formal": "tú",
+    "npcName": "Lucía",
+    "npcEmoji": "👩",
+    "turns": [
+     {
+      "who": "npc",
+      "es": "¡Buenas noches!",
+      "nl": "Goedenavond!"
+     },
+     {
+      "who": "you",
+      "ex": {
+       "type": "choice",
+       "prompt": "Begroet haar terug.",
+       "options": [
+        "Buenas noches.",
+        "Buenos días.",
+        "Hasta mañana."
+       ],
+       "optionsNl": [
+        "Goedenavond.",
+        "Goedemorgen.",
+        "Tot morgen."
+       ],
+       "answer": 0,
+       "id": "L01-03-t1"
+      }
+     },
+     {
+      "who": "npc",
+      "es": "¿Qué tal?",
+      "nl": "Hoe gaat het?"
+     },
+     {
+      "who": "you",
+      "ex": {
+       "type": "choice",
+       "prompt": "Zeg dat het zo-zo gaat en vraag hoe het met haar gaat.",
+       "options": [
+        "Regular, gracias. ¿Y usted?",
+        "Hasta mañana. ¿Y tú?",
+        "Regular, gracias. ¿Y tú?"
+       ],
+       "optionsNl": [
+        "Zo-zo, dank je. En met u?",
+        "Tot morgen. En met jou?",
+        "Zo-zo, dank je. En met jou?"
+       ],
+       "answer": 2,
+       "explain": "Lucía is een leeftijdsgenote, dus je zegt **tú**: **¿Y tú?**",
+       "id": "L01-03-t2"
+      }
+     },
+     {
+      "who": "npc",
+      "es": "Muy bien, gracias.",
+      "nl": "Heel goed, dank je."
+     },
+     {
+      "who": "you",
+      "ex": {
+       "type": "choice",
+       "prompt": "Vraag hoe ze heet.",
+       "options": [
+        "¿Cómo se llama usted?",
+        "¿Cómo te llamas?",
+        "¿Cómo estás?"
+       ],
+       "optionsNl": [
+        "Hoe heet u?",
+        "Hoe heet je?",
+        "Hoe gaat het met je?"
+       ],
+       "answer": 1,
+       "id": "L01-03-t3"
+      }
+     },
+     {
+      "who": "npc",
+      "es": "Me llamo Lucía. ¿Y tú?",
+      "nl": "Ik heet Lucía. En jij?"
+     },
+     {
+      "who": "you",
+      "ex": {
+       "type": "build",
+       "prompt": "Zeg dat je Sam heet.",
+       "words": [
+        "Me",
+        "llamo",
+        "Sam.",
+        "te",
+        "llamas"
+       ],
+       "answers": [
+        "Me llamo Sam."
+       ],
+       "hint": "Het zijn drie woorden. Jij zegt **llamo**, niet **llamas**.",
+       "id": "L01-03-t4"
+      }
+     },
+     {
+      "who": "npc",
+      "es": "Mucho gusto, Sam.",
+      "nl": "Aangenaam, Sam."
+     },
+     {
+      "who": "you",
+      "ex": {
+       "type": "choice",
+       "prompt": "Zeg dat het jou ook aangenaam is.",
+       "options": [
+        "Perdón.",
+        "Adiós.",
+        "Mucho gusto."
+       ],
+       "optionsNl": [
+        "Sorry.",
+        "Tot ziens.",
+        "Aangenaam."
+       ],
+       "answer": 2,
+       "id": "L01-03-t5"
+      }
+     },
+     {
+      "who": "npc",
+      "es": "Es tarde, Sam. Hasta mañana.",
+      "nl": "Het is laat, Sam. Tot morgen."
+     },
+     {
+      "who": "you",
+      "ex": {
+       "type": "choice",
+       "prompt": "Neem afscheid: je ziet haar morgen weer.",
+       "options": [
+        "Hasta mañana, Lucía.",
+        "Buenos días, Lucía.",
+        "Mucho gusto, Lucía."
+       ],
+       "optionsNl": [
+        "Tot morgen, Lucía.",
+        "Goedemorgen, Lucía.",
+        "Aangenaam, Lucía."
+       ],
+       "answer": 0,
+       "id": "L01-03-t6"
+      }
+     },
+     {
+      "who": "npc",
+      "es": "¡Buenas noches, Sam!",
+      "nl": "Goedenacht, Sam!"
+     },
+     {
+      "who": "you",
+      "ex": {
+       "type": "build",
+       "prompt": "Zeg goedenacht tegen Lucía.",
+       "words": [
+        "Buenas",
+        "noches,",
+        "Lucía.",
+        "tardes",
+        "días"
+       ],
+       "answers": [
+        "Buenas noches, Lucía."
+       ],
+       "id": "L01-03-t7"
+      }
+     }
+    ]
+   },
+   "id": "L01-03"
+  },
+  {
+   "kind": "learn",
+   "title": "Jezelf voorstellen",
+   "emoji": "🪪",
+   "cards": [
+    {
+     "kind": "text",
+     "title": "Wat ga je leren?",
+     "body": "In deze les leer je zeggen **wie je bent**, **hoe je heet**, **waar je vandaan komt** en **wat je doet**. Daarvoor heb je twee werkwoorden nodig: **ser** (zijn) en **llamarse** (heten).\n\nIn het Spaans verandert het werkwoord mee met de persoon. Dat zie je in de tabellen hierna."
+    },
+    {
+     "kind": "table",
+     "title": "ser: zijn",
+     "head": [
+      "Wie",
+      "Spaans",
+      "Nederlands"
+     ],
+     "rows": [
+      [
+       "yo",
+       "**soy**",
+       "ik ben"
+      ],
+      [
+       "tú",
+       "**eres**",
+       "jij bent"
+      ],
+      [
+       "él / ella / usted",
+       "**es**",
+       "hij / zij / u is"
+      ],
+      [
+       "nosotros / nosotras",
+       "**somos**",
+       "wij zijn"
+      ],
+      [
+       "vosotros / vosotras",
+       "**sois**",
+       "jullie zijn"
+      ],
+      [
+       "ellos / ellas / ustedes",
+       "**son**",
+       "zij / u (meervoud) zijn"
+      ]
+     ],
+     "note": "Het voornaamwoord mag je meestal weglaten: **Soy policía** betekent «ik ben politieagent». **Usted** is «u», **ustedes** is «u» of «jullie» in meervoud (formeel)."
+    },
+    {
+     "kind": "table",
+     "title": "llamarse: heten",
+     "head": [
+      "Wie",
+      "Spaans",
+      "Nederlands"
+     ],
+     "rows": [
+      [
+       "yo",
+       "**me llamo**",
+       "ik heet"
+      ],
+      [
+       "tú",
+       "**te llamas**",
+       "jij heet"
+      ],
+      [
+       "él / ella / usted",
+       "**se llama**",
+       "hij / zij / u heet"
+      ],
+      [
+       "nosotros / nosotras",
+       "**nos llamamos**",
+       "wij heten"
+      ],
+      [
+       "vosotros / vosotras",
+       "**os llamáis**",
+       "jullie heten"
+      ],
+      [
+       "ellos / ellas / ustedes",
+       "**se llaman**",
+       "zij / u (meervoud) heten"
+      ]
+     ],
+     "note": "Letterlijk betekent **me llamo** «ik noem mezelf». Daarom staat er een klein woordje (me, te, se) voor."
+    },
+    {
+     "kind": "examples",
+     "title": "Vragen en antwoorden",
+     "intro": "Let op: een vraag begint met ¿ en eindigt met ?.",
+     "items": [
+      {
+       "es": "¿Cómo te llamas?",
+       "nl": "Hoe heet je?"
+      },
+      {
+       "es": "Me llamo Eva.",
+       "nl": "Ik heet Eva."
+      },
+      {
+       "es": "¿Cómo se llama usted?",
+       "nl": "Hoe heet u?"
+      },
+      {
+       "es": "¿De dónde eres?",
+       "nl": "Waar kom je vandaan?"
+      },
+      {
+       "es": "¿De dónde es usted?",
+       "nl": "Waar komt u vandaan?"
+      },
+      {
+       "es": "Soy de Utrecht.",
+       "nl": "Ik kom uit Utrecht."
+      },
+      {
+       "es": "Soy de los Países Bajos.",
+       "nl": "Ik kom uit Nederland."
+      },
+      {
+       "es": "Soy de Holanda.",
+       "nl": "Ik kom uit Holland."
+      }
+     ]
+    },
+    {
+     "kind": "table",
+     "title": "Landen en nationaliteiten",
+     "intro": "Je herkent de woorden vast. De vrouwelijke vorm eindigt meestal op **-a**.",
+     "head": [
+      "Land",
+      "Hij is ...",
+      "Zij is ..."
+     ],
+     "rows": [
+      [
+       "los Países Bajos",
+       "neerlandés",
+       "neerlandesa"
+      ],
+      [
+       "España",
+       "español",
+       "española"
+      ],
+      [
+       "Alemania",
+       "alemán",
+       "alemana"
+      ],
+      [
+       "Francia",
+       "francés",
+       "francesa"
+      ],
+      [
+       "Italia",
+       "italiano",
+       "italiana"
+      ],
+      [
+       "Inglaterra",
+       "inglés",
+       "inglesa"
+      ],
+      [
+       "Bélgica",
+       "belga",
+       "belga"
+      ],
+      [
+       "Portugal",
+       "portugués",
+       "portuguesa"
+      ]
+     ],
+     "note": "Je hoort ook **Holanda** en **holandés / holandesa**. Dat is gewoon Spaans in Spanje. Nationaliteiten schrijf je met een kleine letter: **soy español**."
+    },
+    {
+     "kind": "examples",
+     "title": "Wat doe je? Beroepen",
+     "items": [
+      {
+       "es": "Soy policía.",
+       "nl": "Ik ben politieagent."
+      },
+      {
+       "es": "Soy agente de policía.",
+       "nl": "Ik ben politieagent (agent van de politie)."
+      },
+      {
+       "es": "Es médica.",
+       "nl": "Zij is arts."
+      },
+      {
+       "es": "Somos estudiantes.",
+       "nl": "Wij zijn studenten."
+      },
+      {
+       "es": "Es camarero.",
+       "nl": "Hij is ober."
+      },
+      {
+       "es": "Soy turista.",
+       "nl": "Ik ben toerist."
+      },
+      {
+       "es": "Es abogada.",
+       "nl": "Zij is advocaat."
+      }
+     ]
+    },
+    {
+     "kind": "tip",
+     "tone": "tip",
+     "title": "Valkuil: no en geen «het»",
+     "body": "Ontkennen is makkelijk: zet **no** voor het werkwoord. **No soy español.** = Ik ben geen Spanjaard.\n\nHeet je in het Nederlands «ik ben Sam»? In het Spaans zeg je meestal **me llamo Sam**. **Soy Sam** kan ook, maar dan zeg je eerder wie je bent dan hoe je heet."
+    }
+   ],
+   "quiz": [
+    {
+     "type": "fill",
+     "sentence": "Yo ___ de Utrecht.",
+     "answers": [
+      "soy"
+     ],
+     "base": "(ser, yo)",
+     "nl": "Ik kom uit Utrecht.",
+     "explain": "Bij **yo** hoort **soy**.",
+     "id": "L01-04-q1"
+    },
+    {
+     "type": "choice",
+     "prompt": "Hoe zeg je «Zij is Spaans»?",
+     "options": [
+      "Ella es español.",
+      "Ella es española.",
+      "Ella son española."
+     ],
+     "answer": 1,
+     "explain": "Een vrouw is **española**, met **-a**. En bij **ella** hoort **es**.",
+     "id": "L01-04-q2"
+    },
+    {
+     "type": "fill",
+     "sentence": "¿Cómo ___ usted?",
+     "answers": [
+      "se llama"
+     ],
+     "base": "(llamarse, usted)",
+     "nl": "Hoe heet u?",
+     "explain": "Bij **usted** gebruik je **se llama**.",
+     "wrong": [
+      {
+       "match": "te llamas",
+       "feedback": "**te llamas** hoort bij **tú**. Bij **usted** zeg je **se llama**."
+      }
+     ],
+     "id": "L01-04-q3"
+    },
+    {
+     "type": "build",
+     "prompt": "Vraag aan een vriend waar hij vandaan komt.",
+     "words": [
+      "¿De",
+      "dónde",
+      "eres?",
+      "es",
+      "soy"
+     ],
+     "answers": [
+      "¿De dónde eres?"
+     ],
+     "id": "L01-04-q4"
+    },
+    {
+     "type": "choice",
+     "prompt": "¿De dónde es usted?",
+     "promptLang": "es",
+     "speak": "¿De dónde es usted?",
+     "nl": "Waar komt u vandaan?",
+     "options": [
+      "Me llamo Eva.",
+      "Muy bien, gracias.",
+      "Soy de Alemania."
+     ],
+     "optionsNl": [
+      "Ik heet Eva.",
+      "Heel goed, dank u.",
+      "Ik kom uit Duitsland."
+     ],
+     "answer": 2,
+     "explain": "Op de vraag «waar komt u vandaan?» antwoord je met **Soy de ...**",
+     "id": "L01-04-q5"
+    },
+    {
+     "type": "fill",
+     "sentence": "Nosotros ___ de Holanda.",
+     "answers": [
+      "somos"
+     ],
+     "base": "(ser, nosotros)",
+     "nl": "Wij komen uit Holland.",
+     "explain": "Bij **nosotros** hoort **somos**.",
+     "id": "L01-04-q6"
+    },
+    {
+     "type": "write",
+     "prompt": "Zeg dat je Sam heet en dat je politieagent bent.",
+     "answers": [
+      "Me llamo Sam y soy policía.",
+      "Me llamo Sam. Soy policía.",
+      "Soy Sam y soy policía.",
+      "Soy Sam. Soy policía.",
+      "Me llamo Sam y soy agente de policía.",
+      "Me llamo Sam. Soy agente de policía."
+     ],
+     "hint": "Twee zinnen of één zin met **y** (en) ertussen.",
+     "wrong": [
+      {
+       "match": "soy llamo",
+       "feedback": "Je mengt twee werkwoorden. Zeg **me llamo** voor je naam en **soy** voor je beroep of herkomst."
+      }
+     ],
+     "id": "L01-04-q7"
+    }
+   ],
+   "id": "L01-04"
+  },
+  {
+   "kind": "practice",
+   "title": "Oefen: jezelf voorstellen",
+   "emoji": "✏️",
+   "exercises": [
+    {
+     "type": "choice",
+     "prompt": "Hoe zeg je «Ik heet Anna»?",
+     "options": [
+      "Te llamas Anna.",
+      "Me llamo Anna.",
+      "Se llama Anna."
+     ],
+     "optionsNl": [
+      "Je heet Anna.",
+      "Ik heet Anna.",
+      "Zij heet Anna."
+     ],
+     "answer": 1,
+     "explain": "**Me llamo** = ik heet. **Te llamas** = jij heet. **Se llama** = hij, zij of u heet.",
+     "id": "L01-05-e1"
+    },
+    {
+     "type": "listen",
+     "mode": "choose",
+     "es": "Me llamo Pablo.",
+     "options": [
+      "Se llama Pablo.",
+      "Te llamas Pablo.",
+      "Me llamo Pablo."
+     ],
+     "answer": 2,
+     "nl": "Ik heet Pablo.",
+     "id": "L01-05-e2"
+    },
+    {
+     "type": "fill",
+     "sentence": "Tú ___ de Alemania.",
+     "answers": [
+      "eres"
+     ],
+     "base": "(ser, tú)",
+     "nl": "Jij komt uit Duitsland.",
+     "explain": "Bij **tú** hoort **eres**.",
+     "id": "L01-05-e3"
+    },
+    {
+     "type": "choice",
+     "prompt": "Wat betekent «¿De dónde eres?»?",
+     "optionsLang": "nl",
+     "options": [
+      "Hoe heet je?",
+      "Hoe gaat het met je?",
+      "Waar kom je vandaan?"
+     ],
+     "answer": 2,
+     "explain": "**¿De dónde ...?** = waar ... vandaan? Het antwoord begint met **Soy de ...**",
+     "id": "L01-05-e4"
+    },
+    {
+     "type": "build",
+     "prompt": "Zeg: «Zij is Frans.»",
+     "words": [
+      "Ella",
+      "es",
+      "francesa.",
+      "francés.",
+      "soy"
+     ],
+     "answers": [
+      "Ella es francesa."
+     ],
+     "explain": "Een vrouw is **francesa**. Bij **ella** hoort **es**.",
+     "id": "L01-05-e5"
+    },
+    {
+     "type": "write",
+     "prompt": "Zeg dat je uit Nederland komt.",
+     "answers": [
+      "Soy de los Países Bajos.",
+      "Soy de Holanda.",
+      "Soy neerlandés.",
+      "Soy neerlandesa.",
+      "Soy holandés.",
+      "Soy holandesa."
+     ],
+     "hint": "Gebruik **soy de ...** of **soy** + nationaliteit.",
+     "wrong": [
+      {
+       "match": "me llamo",
+       "feedback": "Met **me llamo** zeg je hoe je heet. Voor je herkomst gebruik je **soy**."
+      }
+     ],
+     "id": "L01-05-e6"
+    },
+    {
+     "type": "fill",
+     "sentence": "Vosotros ___ de Italia.",
+     "answers": [
+      "sois"
+     ],
+     "base": "(ser, vosotros)",
+     "nl": "Jullie komen uit Italië.",
+     "explain": "Bij **vosotros** hoort **sois**.",
+     "id": "L01-05-e7"
+    },
+    {
+     "type": "choice",
+     "prompt": "Je vraagt een vreemde man hoe hij heet. Wat zeg je?",
+     "options": [
+      "¿Cómo te llamas?",
+      "¿Cómo se llama usted?",
+      "¿De dónde eres?"
+     ],
+     "optionsNl": [
+      "Hoe heet je?",
+      "Hoe heet u?",
+      "Waar kom je vandaan?"
+     ],
+     "answer": 1,
+     "explain": "Tegen een vreemde gebruik je **usted**: **¿Cómo se llama usted?**",
+     "id": "L01-05-e8"
+    },
+    {
+     "type": "listen",
+     "mode": "type",
+     "es": "Soy de España.",
+     "answers": [
+      "Soy de España."
+     ],
+     "nl": "Ik kom uit Spanje.",
+     "id": "L01-05-e9"
+    },
+    {
+     "type": "write",
+     "prompt": "Vraag aan een vriend hoe hij heet.",
+     "answers": [
+      "¿Cómo te llamas?"
+     ],
+     "hint": "Tegen een vriend zeg je **tú**.",
+     "wrong": [
+      {
+       "match": "se llama",
+       "feedback": "**se llama** hoort bij **usted**. Tegen een vriend zeg je **te llamas**."
+      }
+     ],
+     "id": "L01-05-e10"
+    },
+    {
+     "type": "choice",
+     "prompt": "Hoe zeg je «Hij is Duits»?",
+     "options": [
+      "Es alemán.",
+      "Es alemana.",
+      "Son alemán."
+     ],
+     "optionsNl": [
+      "Hij is Duits.",
+      "Zij is Duits.",
+      "Zij zijn Duits."
+     ],
+     "answer": 0,
+     "explain": "Een man is **alemán**. Bij **él** hoort **es**.",
+     "id": "L01-05-e11"
+    },
+    {
+     "type": "fill",
+     "sentence": "Ella ___ médica.",
+     "answers": [
+      "es"
+     ],
+     "base": "(ser, ella)",
+     "nl": "Zij is arts.",
+     "explain": "Bij **ella**, **él** en **usted** hoort **es**.",
+     "id": "L01-05-e12"
+    },
+    {
+     "type": "build",
+     "prompt": "Vraag beleefd: «Hoe gaat het met u?»",
+     "words": [
+      "¿Cómo",
+      "está",
+      "usted?",
+      "estás",
+      "tú?"
+     ],
+     "answers": [
+      "¿Cómo está usted?"
+     ],
+     "id": "L01-05-e13"
+    },
+    {
+     "type": "write",
+     "prompt": "Stel jezelf voor: je heet Eva en je bent Duitse.",
+     "answers": [
+      "Me llamo Eva y soy alemana.",
+      "Me llamo Eva. Soy alemana.",
+      "Soy Eva y soy alemana.",
+      "Soy Eva. Soy alemana."
+     ],
+     "hint": "Eerst je naam, dan je nationaliteit. Een vrouw is **alemana**.",
+     "id": "L01-05-e14"
+    }
+   ],
+   "id": "L01-05"
+  },
+  {
+   "kind": "dialogue",
+   "title": "Inchecken in een hotel",
+   "emoji": "🏨",
+   "dialogue": {
+    "setting": "Je komt aan bij een hotel in Barcelona en loopt naar de receptie. De receptionist kent je niet en zegt «usted» tegen je. Jij zegt ook «usted». Je naam in dit gesprek is Sam Jansen.",
+    "formal": "usted",
+    "npcName": "Recepcionista",
+    "npcEmoji": "🛎️",
+    "turns": [
+     {
+      "who": "npc",
+      "es": "Buenas tardes, bienvenido.",
+      "nl": "Goedemiddag, welkom."
+     },
+     {
+      "who": "you",
+      "ex": {
+       "type": "choice",
+       "prompt": "Begroet de receptionist. Het is middag.",
+       "options": [
+        "Hasta luego.",
+        "Buenas tardes.",
+        "Buenas noches."
+       ],
+       "optionsNl": [
+        "Tot straks.",
+        "Goedemiddag.",
+        "Goedenavond."
+       ],
+       "answer": 1,
+       "id": "L01-06-t1"
+      }
+     },
+     {
+      "who": "npc",
+      "es": "¿Cómo está usted?",
+      "nl": "Hoe gaat het met u?"
+     },
+     {
+      "who": "you",
+      "ex": {
+       "type": "choice",
+       "prompt": "Zeg dat het heel goed gaat en vraag beleefd hoe het met de receptionist gaat.",
+       "options": [
+        "Muy bien, gracias. ¿Y tú?",
+        "Muy bien, gracias. ¿Y usted?",
+        "Muy bien, gracias. ¿Cómo te llamas?"
+       ],
+       "optionsNl": [
+        "Heel goed, dank je. En met jou?",
+        "Heel goed, dank u. En met u?",
+        "Heel goed, dank je. Hoe heet je?"
+       ],
+       "answer": 1,
+       "explain": "Je zegt **usted** tegen een vreemde: **¿Y usted?**",
+       "id": "L01-06-t2"
+      }
+     },
+     {
+      "who": "npc",
+      "es": "Bien, gracias. ¿Cómo se llama usted?",
+      "nl": "Goed, dank u. Hoe heet u?"
+     },
+     {
+      "who": "you",
+      "ex": {
+       "type": "build",
+       "prompt": "Zeg dat je Sam Jansen heet.",
+       "words": [
+        "Me",
+        "llamo",
+        "Sam",
+        "Jansen.",
+        "llama",
+        "soy"
+       ],
+       "answers": [
+        "Me llamo Sam Jansen."
+       ],
+       "hint": "Begin met **me llamo**.",
+       "id": "L01-06-t3"
+      }
+     },
+     {
+      "who": "npc",
+      "es": "Gracias, señor Jansen. ¿De dónde es usted?",
+      "nl": "Dank u, meneer Jansen. Waar komt u vandaan?"
+     },
+     {
+      "who": "you",
+      "ex": {
+       "type": "choice",
+       "prompt": "Zeg dat je uit Nederland komt.",
+       "options": [
+        "Es de los Países Bajos.",
+        "Soy de los Países Bajos.",
+        "Me llamo los Países Bajos."
+       ],
+       "optionsNl": [
+        "Hij komt uit Nederland.",
+        "Ik kom uit Nederland.",
+        "Ik heet Nederland."
+       ],
+       "answer": 1,
+       "explain": "Over jezelf zeg je **soy de ...**",
+       "id": "L01-06-t4"
+      }
+     },
+     {
+      "who": "npc",
+      "es": "¡Ah, Holanda! ¿Es usted turista?",
+      "nl": "Ah, Nederland! Bent u toerist?"
+     },
+     {
+      "who": "you",
+      "ex": {
+       "type": "choice",
+       "prompt": "Zeg dat je geen toerist bent, maar politieagent.",
+       "options": [
+        "Sí, soy policía.",
+        "No, me llamo policía.",
+        "No, soy policía."
+       ],
+       "optionsNl": [
+        "Ja, ik ben politieagent.",
+        "Nee, ik heet politieagent.",
+        "Nee, ik ben politieagent."
+       ],
+       "answer": 2,
+       "id": "L01-06-t5"
+      }
+     },
+     {
+      "who": "npc",
+      "es": "¡Qué interesante! Un momento, por favor.",
+      "nl": "Wat interessant! Een momentje, alstublieft."
+     },
+     {
+      "who": "you",
+      "ex": {
+       "type": "choice",
+       "prompt": "Zeg dank je wel.",
+       "options": [
+        "Gracias.",
+        "De nada.",
+        "Perdón."
+       ],
+       "optionsNl": [
+        "Dank u.",
+        "Graag gedaan.",
+        "Pardon."
+       ],
+       "answer": 0,
+       "id": "L01-06-t6"
+      }
+     },
+     {
+      "who": "npc",
+      "es": "Aquí tiene su llave. Hasta luego, señor Jansen.",
+      "nl": "Hier is uw sleutel. Tot straks, meneer Jansen."
+     },
+     {
+      "who": "you",
+      "ex": {
+       "type": "build",
+       "prompt": "Bedank en neem afscheid: «Dank u. Tot straks.»",
+       "words": [
+        "Gracias.",
+        "Hasta",
+        "luego.",
+        "mañana.",
+        "Perdón."
+       ],
+       "answers": [
+        "Gracias. Hasta luego.",
+        "Gracias. Hasta mañana."
+       ],
+       "id": "L01-06-t7"
+      }
+     }
+    ]
+   },
+   "id": "L01-06"
+  },
+  {
+   "kind": "learn",
+   "title": "Spellen, getallen en «ik begrijp het niet»",
+   "emoji": "🔤",
+   "cards": [
+    {
+     "kind": "text",
+     "title": "Wat ga je leren?",
+     "body": "In deze les leer je het **alfabet**, je **naam spellen**, de **getallen van 0 tot 20** en wat je zegt als je iets **niet verstaat**.\n\nDat laatste is goud waard: met een paar vaste zinnen red je elk gesprek."
+    },
+    {
+     "kind": "table",
+     "title": "Het alfabet (A tot en met N)",
+     "intro": "Zo heten de letters. Het Spaanse alfabet heeft ook de letter **ñ**.",
+     "head": [
+      "Letter",
+      "Naam",
+      "Letter",
+      "Naam"
+     ],
+     "rows": [
+      [
+       "A",
+       "a",
+       "H",
+       "hache"
+      ],
+      [
+       "B",
+       "be",
+       "I",
+       "i"
+      ],
+      [
+       "C",
+       "ce",
+       "J",
+       "jota"
+      ],
+      [
+       "D",
+       "de",
+       "K",
+       "ka"
+      ],
+      [
+       "E",
+       "e",
+       "L",
+       "ele"
+      ],
+      [
+       "F",
+       "efe",
+       "M",
+       "eme"
+      ],
+      [
+       "G",
+       "ge",
+       "N",
+       "ene"
+      ]
+     ]
+    },
+    {
+     "kind": "table",
+     "title": "Het alfabet (Ñ tot en met Z)",
+     "head": [
+      "Letter",
+      "Naam",
+      "Letter",
+      "Naam"
+     ],
+     "rows": [
+      [
+       "Ñ",
+       "eñe",
+       "T",
+       "te"
+      ],
+      [
+       "O",
+       "o",
+       "U",
+       "u"
+      ],
+      [
+       "P",
+       "pe",
+       "V",
+       "uve"
+      ],
+      [
+       "Q",
+       "cu",
+       "W",
+       "uve doble"
+      ],
+      [
+       "R",
+       "erre",
+       "X",
+       "equis"
+      ],
+      [
+       "S",
+       "ese",
+       "Y",
+       "i griega"
+      ],
+      [
+       "Z",
+       "zeta",
+       "",
+       ""
+      ]
+     ],
+     "note": "De **h** spreek je niet uit: **hola** klinkt als «ola»."
+    },
+    {
+     "kind": "table",
+     "title": "Uitspraak: de lastige klanken",
+     "head": [
+      "Letter",
+      "Klinkt als",
+      "Voorbeeld"
+     ],
+     "rows": [
+      [
+       "j, en g voor e/i",
+       "een harde ch (zoals in «lachen»)",
+       "**jota**, **gente**"
+      ],
+      [
+       "z, en c voor e/i",
+       "«th» (zoals in het Engelse «think»)",
+       "**zeta**, **gracias**"
+      ],
+      [
+       "ll",
+       "ongeveer «lj» of «j»",
+       "**llamo**"
+      ],
+      [
+       "ñ",
+       "«nj»",
+       "**señor**"
+      ],
+      [
+       "qu",
+       "een k",
+       "**que**"
+      ],
+      [
+       "v en b",
+       "bijna hetzelfde, een zachte b",
+       "**vino**, **bien**"
+      ],
+      [
+       "rr",
+       "een rollende r",
+       "**perro**"
+      ],
+      [
+       "h",
+       "niet uitgesproken",
+       "**hola**"
+      ]
+     ],
+     "note": "Spaans klinkt bijna zoals het geschreven wordt. Elke klinker heeft maar één klank."
+    },
+    {
+     "kind": "examples",
+     "title": "Je naam spellen",
+     "intro": "Als agent spel je namen de hele dag. Oefen dit goed.",
+     "items": [
+      {
+       "es": "¿Cómo se escribe?",
+       "nl": "Hoe schrijf je dat?"
+      },
+      {
+       "es": "Se escribe: ese, a, eme.",
+       "nl": "Het wordt geschreven: S, A, M."
+      },
+      {
+       "es": "Se escribe con jota.",
+       "nl": "Het wordt met een j geschreven."
+      },
+      {
+       "es": "Doble ele.",
+       "nl": "Dubbel l."
+      },
+      {
+       "es": "¿Cómo se dice «bank» en español?",
+       "nl": "Hoe zeg je «bank» in het Spaans?"
+      }
+     ]
+    },
+    {
+     "kind": "table",
+     "title": "Getallen 0 tot 20",
+     "head": [
+      "Getal",
+      "Spaans",
+      "Getal",
+      "Spaans"
+     ],
+     "rows": [
+      [
+       "0",
+       "cero",
+       "11",
+       "once"
+      ],
+      [
+       "1",
+       "uno",
+       "12",
+       "doce"
+      ],
+      [
+       "2",
+       "dos",
+       "13",
+       "trece"
+      ],
+      [
+       "3",
+       "tres",
+       "14",
+       "catorce"
+      ],
+      [
+       "4",
+       "cuatro",
+       "15",
+       "quince"
+      ],
+      [
+       "5",
+       "cinco",
+       "16",
+       "dieciséis"
+      ],
+      [
+       "6",
+       "seis",
+       "17",
+       "diecisiete"
+      ],
+      [
+       "7",
+       "siete",
+       "18",
+       "dieciocho"
+      ],
+      [
+       "8",
+       "ocho",
+       "19",
+       "diecinueve"
+      ],
+      [
+       "9",
+       "nueve",
+       "20",
+       "veinte"
+      ],
+      [
+       "10",
+       "diez",
+       "",
+       ""
+      ]
+     ],
+     "note": "Vanaf 16 zijn het samengestelde woorden: **diez y seis** werd **dieciséis**."
+    },
+    {
+     "kind": "examples",
+     "title": "Als je het niet verstaat",
+     "intro": "Leer deze zinnen uit je hoofd. Je gebruikt ze in elk gesprek.",
+     "items": [
+      {
+       "es": "No entiendo.",
+       "nl": "Ik begrijp het niet."
+      },
+      {
+       "es": "¿Puede repetir, por favor?",
+       "nl": "Kunt u het herhalen, alstublieft?"
+      },
+      {
+       "es": "Más despacio, por favor.",
+       "nl": "Langzamer, alstublieft."
+      },
+      {
+       "es": "Hablo un poco de español.",
+       "nl": "Ik spreek een beetje Spaans."
+      },
+      {
+       "es": "¿Cómo se dice «politie» en español?",
+       "nl": "Hoe zeg je «politie» in het Spaans?"
+      },
+      {
+       "es": "¿Qué significa «comisaría»?",
+       "nl": "Wat betekent «comisaría»?"
+      }
+     ]
+    },
+    {
+     "kind": "tip",
+     "tone": "police",
+     "title": "Werk: namen spellen",
+     "body": "Bij een aangifte of controle moet je namen vaak laten spellen. Vraag dan: **¿Cómo se escribe?** Spaanse namen kennen **ll**, **ñ** en **j**. Spel de letters rustig na om zeker te zijn.\n\nDit is oefenmateriaal en geen officiële vertaling."
+    }
+   ],
+   "quiz": [
+    {
+     "type": "choice",
+     "prompt": "Luister en kies het getal.",
+     "speak": "siete",
+     "optionsLang": "nl",
+     "options": [
+      "6",
+      "7",
+      "17"
+     ],
+     "answer": 1,
+     "explain": "**siete** = 7. Het getal **17** is **diecisiete**.",
+     "id": "L01-07-q1"
+    },
+    {
+     "type": "fill",
+     "sentence": "Tres, cuatro, ___, seis.",
+     "answers": [
+      "cinco"
+     ],
+     "base": "(5)",
+     "nl": "Drie, vier, vijf, zes.",
+     "explain": "**cinco** = 5.",
+     "id": "L01-07-q2"
+    },
+    {
+     "type": "choice",
+     "prompt": "Hoe vraag je hoe je een woord schrijft?",
+     "options": [
+      "¿Cómo se llama?",
+      "¿Cómo se dice?",
+      "¿Cómo se escribe?"
+     ],
+     "optionsNl": [
+      "Hoe heet het?",
+      "Hoe zeg je het?",
+      "Hoe schrijf je het?"
+     ],
+     "answer": 2,
+     "explain": "**escribir** betekent schrijven. **¿Cómo se escribe?** = hoe schrijf je dat?",
+     "id": "L01-07-q3"
+    },
+    {
+     "type": "build",
+     "prompt": "Zeg: «Ik begrijp het niet.»",
+     "words": [
+      "No",
+      "entiendo.",
+      "Sí",
+      "hablo"
+     ],
+     "answers": [
+      "No entiendo."
+     ],
+     "id": "L01-07-q4"
+    },
+    {
+     "type": "write",
+     "prompt": "Vraag beleefd of iemand het kan herhalen.",
+     "answers": [
+      "¿Puede repetir, por favor?",
+      "¿Puede repetir?",
+      "¿Puedes repetir, por favor?",
+      "¿Puedes repetir?"
+     ],
+     "hint": "Het eerste woord betekent «kunt u». Het tweede is «herhalen».",
+     "explain": "**¿Puede repetir?** is beleefd (usted). Tegen een vriend zeg je **¿Puedes repetir?**",
+     "id": "L01-07-q5"
+    },
+    {
+     "type": "listen",
+     "mode": "type",
+     "es": "veinte",
+     "answers": [
+      "veinte"
+     ],
+     "nl": "twintig",
+     "id": "L01-07-q6"
+    },
+    {
+     "type": "choice",
+     "prompt": "Welke letter heet **jota**?",
+     "optionsLang": "nl",
+     "options": [
+      "J",
+      "H",
+      "G"
+     ],
+     "answer": 0,
+     "explain": "De **j** heet **jota**. De **h** heet **hache** en wordt niet uitgesproken.",
+     "id": "L01-07-q7"
+    }
+   ],
+   "id": "L01-07"
+  },
+  {
+   "kind": "practice",
+   "title": "Oefen: spellen, getallen en herhalen",
+   "emoji": "✏️",
+   "exercises": [
+    {
+     "type": "choice",
+     "prompt": "Wat betekent «No entiendo»?",
+     "optionsLang": "nl",
+     "options": [
+      "Ik ben niet hier.",
+      "Ik heet niet.",
+      "Ik begrijp het niet."
+     ],
+     "answer": 2,
+     "explain": "**No entiendo** = ik begrijp het niet. Een goede zin om vaak te gebruiken.",
+     "id": "L01-08-e1"
+    },
+    {
+     "type": "listen",
+     "mode": "choose",
+     "es": "doce",
+     "options": [
+      "dos",
+      "doce",
+      "diez"
+     ],
+     "answer": 1,
+     "nl": "twaalf",
+     "id": "L01-08-e2"
+    },
+    {
+     "type": "fill",
+     "sentence": "Uno, dos, ___, cuatro.",
+     "answers": [
+      "tres"
+     ],
+     "base": "(3)",
+     "nl": "Een, twee, drie, vier.",
+     "explain": "**tres** = 3.",
+     "id": "L01-08-e3"
+    },
+    {
+     "type": "build",
+     "prompt": "Vraag: «Kunt u het herhalen, alstublieft?»",
+     "words": [
+      "¿Puede",
+      "repetir,",
+      "por",
+      "favor?",
+      "entiendo",
+      "despacio"
+     ],
+     "answers": [
+      "¿Puede repetir, por favor?"
+     ],
+     "id": "L01-08-e4"
+    },
+    {
+     "type": "choice",
+     "prompt": "Welk getal is **quince**?",
+     "optionsLang": "nl",
+     "options": [
+      "5",
+      "15",
+      "50"
+     ],
+     "answer": 1,
+     "explain": "**cinco** = 5, **quince** = 15.",
+     "id": "L01-08-e5"
+    },
+    {
+     "type": "write",
+     "prompt": "Vraag een vreemde (usted) hoe hij heet en waar hij vandaan komt.",
+     "answers": [
+      "¿Cómo se llama usted? ¿De dónde es usted?",
+      "¿Cómo se llama? ¿De dónde es?",
+      "¿Cómo se llama usted y de dónde es?"
+     ],
+     "hint": "Twee vragen achter elkaar. Beide met **usted**.",
+     "wrong": [
+      {
+       "match": "te llamas",
+       "feedback": "**te llamas** is voor **tú**. Tegen een vreemde zeg je **se llama**."
+      }
+     ],
+     "id": "L01-08-e6"
+    },
+    {
+     "type": "listen",
+     "mode": "type",
+     "es": "Me llamo Eva.",
+     "answers": [
+      "Me llamo Eva."
+     ],
+     "nl": "Ik heet Eva.",
+     "id": "L01-08-e7"
+    },
+    {
+     "type": "choice",
+     "prompt": "Hoe zeg je «Langzamer, alstublieft»?",
+     "options": [
+      "Hasta mañana, por favor.",
+      "Más despacio, por favor.",
+      "Un poco de español."
+     ],
+     "optionsNl": [
+      "Tot morgen, alstublieft.",
+      "Langzamer, alstublieft.",
+      "Een beetje Spaans."
+     ],
+     "answer": 1,
+     "id": "L01-08-e8"
+    },
+    {
+     "type": "fill",
+     "sentence": "Yo ___ un poco de español.",
+     "answers": [
+      "hablo"
+     ],
+     "base": "(hablar)",
+     "nl": "Ik spreek een beetje Spaans.",
+     "explain": "**hablo** = ik spreek. Je kent de zin **Hablo un poco de español** nu uit je hoofd.",
+     "id": "L01-08-e9"
+    },
+    {
+     "type": "write",
+     "prompt": "Zeg dat je een beetje Spaans spreekt.",
+     "answers": [
+      "Hablo un poco de español."
+     ],
+     "hint": "Begin met **hablo**.",
+     "id": "L01-08-e10"
+    },
+    {
+     "type": "choice",
+     "prompt": "Wat betekent «Ella es alemana»?",
+     "optionsLang": "nl",
+     "options": [
+      "Zij is Duitse.",
+      "Hij is Duits.",
+      "Zij heet Alemana."
+     ],
+     "answer": 0,
+     "explain": "**alemana** is de vrouwelijke vorm. Bij een man zeg je **alemán**.",
+     "id": "L01-08-e11"
+    },
+    {
+     "type": "build",
+     "prompt": "Spel de naam «Ana» (A-N-A).",
+     "words": [
+      "a",
+      "ene",
+      "a",
+      "be",
+      "ese"
+     ],
+     "answers": [
+      "a ene a"
+     ],
+     "explain": "A = **a**, N = **ene**. Dus A-N-A is **a, ene, a**.",
+     "id": "L01-08-e12"
+    },
+    {
+     "type": "fill",
+     "sentence": "Ellos ___ Pablo y Ana.",
+     "answers": [
+      "se llaman"
+     ],
+     "base": "(llamarse, ellos)",
+     "nl": "Zij heten Pablo en Ana.",
+     "explain": "Bij **ellos**, **ellas** en **ustedes** hoort **se llaman**.",
+     "id": "L01-08-e13"
+    },
+    {
+     "type": "write",
+     "prompt": "Stel jezelf voor: je heet Sam, je komt uit Utrecht en je bent politieagent.",
+     "answers": [
+      "Me llamo Sam, soy de Utrecht y soy policía.",
+      "Me llamo Sam. Soy de Utrecht. Soy policía.",
+      "Me llamo Sam y soy de Utrecht. Soy policía.",
+      "Soy Sam, soy de Utrecht y soy policía.",
+      "Me llamo Sam, soy de Utrecht y soy agente de policía.",
+      "Me llamo Sam. Soy de Utrecht. Soy agente de policía."
+     ],
+     "hint": "Drie dingen: je naam (**me llamo**), je herkomst (**soy de**) en je beroep (**soy**).",
+     "wrong": [
+      {
+       "match": "soy llamo",
+       "feedback": "Je mengt twee werkwoorden. **Me llamo** voor je naam, **soy** voor herkomst en beroep."
+      }
+     ],
+     "id": "L01-08-e14"
+    }
+   ],
+   "id": "L01-08"
+  },
+  {
+   "kind": "dialogue",
+   "title": "Eerste contact met een toerist",
+   "emoji": "👮",
+   "dialogue": {
+    "setting": "Je bent agent en staat in uniform bij het Centraal Station. Een Spaanse toerist spreekt je aan. Jullie kennen elkaar niet, dus je zegt «usted». Jij heet Sam.",
+    "formal": "usted",
+    "npcName": "Turista",
+    "npcEmoji": "🧳",
+    "tags": [
+     "politie"
+    ],
+    "turns": [
+     {
+      "who": "npc",
+      "es": "Buenas tardes, agente.",
+      "nl": "Goedemiddag, agent."
+     },
+     {
+      "who": "you",
+      "ex": {
+       "type": "choice",
+       "prompt": "Begroet de toerist (het is middag) en vraag beleefd hoe het met hem gaat.",
+       "options": [
+        "Buenas noches. ¿Cómo estás?",
+        "Buenas tardes. ¿Cómo está usted?",
+        "Hasta luego. ¿Cómo está usted?"
+       ],
+       "optionsNl": [
+        "Goedenavond. Hoe gaat het met je?",
+        "Goedemiddag. Hoe gaat het met u?",
+        "Tot straks. Hoe gaat het met u?"
+       ],
+       "answer": 1,
+       "explain": "Tegen een vreemde zeg je als agent altijd **usted**.",
+       "id": "L01-09-t1"
+      }
+     },
+     {
+      "who": "npc",
+      "es": "Bien, gracias. ¿Y usted?",
+      "nl": "Goed, dank u. En u?"
+     },
+     {
+      "who": "you",
+      "ex": {
+       "type": "choice",
+       "prompt": "Zeg dat het goed gaat.",
+       "options": [
+        "Bien, gracias.",
+        "De nada.",
+        "Perdone."
+       ],
+       "optionsNl": [
+        "Goed, dank u.",
+        "Graag gedaan.",
+        "Pardon."
+       ],
+       "answer": 0,
+       "id": "L01-09-t2"
+      }
+     },
+     {
+      "who": "npc",
+      "es": "¿Cómo se llama usted, agente?",
+      "nl": "Hoe heet u, agent?"
+     },
+     {
+      "who": "you",
+      "ex": {
+       "type": "build",
+       "prompt": "Zeg dat je Sam heet en dat je agent van de politie bent.",
+       "words": [
+        "Me",
+        "llamo",
+        "Sam.",
+        "Soy",
+        "agente",
+        "de",
+        "policía.",
+        "llama",
+        "eres"
+       ],
+       "answers": [
+        "Me llamo Sam. Soy agente de policía.",
+        "Me llamo Sam. Soy policía."
+       ],
+       "hint": "Twee korte zinnen: eerst **me llamo**, dan **soy**.",
+       "id": "L01-09-t3"
+      }
+     },
+     {
+      "who": "npc",
+      "es": "Mucho gusto, agente. Me llamo Pablo.",
+      "nl": "Aangenaam, agent. Ik heet Pablo."
+     },
+     {
+      "who": "you",
+      "ex": {
+       "type": "choice",
+       "prompt": "Zeg dat het je aangenaam is en vraag beleefd waar hij vandaan komt.",
+       "options": [
+        "Mucho gusto. ¿De dónde es usted?",
+        "Mucho gusto. ¿De dónde eres?",
+        "Mucho gusto. ¿Cómo está usted?"
+       ],
+       "optionsNl": [
+        "Aangenaam. Waar komt u vandaan?",
+        "Aangenaam. Waar kom je vandaan?",
+        "Aangenaam. Hoe gaat het met u?"
+       ],
+       "answer": 0,
+       "id": "L01-09-t4"
+      }
+     },
+     {
+      "who": "npc",
+      "es": "Soy de España, de Sevilla.",
+      "nl": "Ik kom uit Spanje, uit Sevilla."
+     },
+     {
+      "who": "you",
+      "ex": {
+       "type": "choice",
+       "prompt": "Vraag hoe zijn naam wordt geschreven.",
+       "options": [
+        "¿Cómo se dice?",
+        "¿Cómo se llama?",
+        "¿Cómo se escribe?"
+       ],
+       "optionsNl": [
+        "Hoe zeg je het?",
+        "Hoe heet hij?",
+        "Hoe schrijf je het?"
+       ],
+       "answer": 2,
+       "id": "L01-09-t5"
+      }
+     },
+     {
+      "who": "npc",
+      "es": "Pablo. Pe, a, be, ele, o.",
+      "nl": "Pablo. P-A-B-L-O."
+     },
+     {
+      "who": "you",
+      "ex": {
+       "type": "build",
+       "prompt": "Controleer de spelling: zeg zijn naam letter voor letter (P-A-B-L-O).",
+       "words": [
+        "pe",
+        "a",
+        "be",
+        "ele",
+        "o",
+        "ese",
+        "ce"
+       ],
+       "answers": [
+        "pe a be ele o"
+       ],
+       "hint": "P = pe, A = a, B = be, L = ele, O = o.",
+       "id": "L01-09-t6"
+      }
+     },
+     {
+      "who": "npc",
+      "es": "Sí, correcto. Muchas gracias, agente.",
+      "nl": "Ja, juist. Hartelijk bedankt, agent."
+     },
+     {
+      "who": "you",
+      "ex": {
+       "type": "choice",
+       "prompt": "Zeg dat het geen moeite is en neem afscheid.",
+       "options": [
+        "Perdón. Hasta luego.",
+        "De nada. Hasta luego.",
+        "Gracias. Buenas noches."
+       ],
+       "optionsNl": [
+        "Sorry. Tot straks.",
+        "Graag gedaan. Tot straks.",
+        "Dank u. Goedenacht."
+       ],
+       "answer": 1,
+       "explain": "Als iemand jou bedankt, zeg je **de nada**.",
+       "id": "L01-09-t7"
+      }
+     },
+     {
+      "who": "npc",
+      "es": "Hasta luego, agente.",
+      "nl": "Tot ziens, agent."
+     },
+     {
+      "who": "you",
+      "ex": {
+       "type": "build",
+       "prompt": "Neem afscheid van Pablo.",
+       "words": [
+        "Hasta",
+        "luego,",
+        "mañana,",
+        "Pablo.",
+        "días"
+       ],
+       "answers": [
+        "Hasta luego, Pablo.",
+        "Hasta mañana, Pablo."
+       ],
+       "id": "L01-09-t8"
+      }
+     }
+    ]
+   },
+   "id": "L01-09"
+  },
+  {
+   "kind": "test",
+   "title": "Toets niveau 1",
+   "emoji": "🏆",
+   "exercises": [
+    {
+     "type": "listen",
+     "mode": "choose",
+     "es": "Buenas noches.",
+     "options": [
+      "Buenos días.",
+      "Buenas noches.",
+      "Buenas tardes."
+     ],
+     "answer": 1,
+     "nl": "Goedenavond.",
+     "id": "L01-10-e1"
+    },
+    {
+     "type": "choice",
+     "prompt": "Het is tien uur 's ochtends. Je ontmoet een vreemde vrouw. Wat zeg je?",
+     "options": [
+      "Buenos días. ¿Cómo está usted?",
+      "Buenas noches. ¿Cómo estás?",
+      "Hasta mañana. ¿Cómo está usted?"
+     ],
+     "optionsNl": [
+      "Goedemorgen. Hoe gaat het met u?",
+      "Goedenavond. Hoe gaat het met je?",
+      "Tot morgen. Hoe gaat het met u?"
+     ],
+     "answer": 0,
+     "explain": "**Buenos días** 's ochtends en **usted** tegen een vreemde.",
+     "id": "L01-10-e2"
+    },
+    {
+     "type": "fill",
+     "sentence": "Buenas ___.",
+     "answers": [
+      "noches"
+     ],
+     "base": "(goedenacht)",
+     "nl": "Goedenacht.",
+     "explain": "**Buenas noches** zeg je als het donker is.",
+     "id": "L01-10-e3"
+    },
+    {
+     "type": "build",
+     "prompt": "Zeg tegen een vriend: «Hoe gaat het met je?»",
+     "words": [
+      "¿Cómo",
+      "estás?",
+      "está",
+      "usted?"
+     ],
+     "answers": [
+      "¿Cómo estás?"
+     ],
+     "id": "L01-10-e4"
+    },
+    {
+     "type": "choice",
+     "prompt": "¿Cómo te llamas?",
+     "promptLang": "es",
+     "speak": "¿Cómo te llamas?",
+     "nl": "Hoe heet je?",
+     "options": [
+      "Soy de Utrecht.",
+      "Me llamo Sam.",
+      "Muy bien, gracias."
+     ],
+     "optionsNl": [
+      "Ik kom uit Utrecht.",
+      "Ik heet Sam.",
+      "Heel goed, dank je."
+     ],
+     "answer": 1,
+     "id": "L01-10-e5"
+    },
+    {
+     "type": "fill",
+     "sentence": "Tú ___ neerlandés.",
+     "answers": [
+      "eres"
+     ],
+     "base": "(ser, tú)",
+     "nl": "Jij bent Nederlander.",
+     "explain": "Bij **tú** hoort **eres**.",
+     "id": "L01-10-e6"
+    },
+    {
+     "type": "write",
+     "prompt": "Zeg dat je Eva heet.",
+     "answers": [
+      "Me llamo Eva.",
+      "Soy Eva."
+     ],
+     "hint": "Je kunt **me llamo** gebruiken.",
+     "id": "L01-10-e7"
+    },
+    {
+     "type": "listen",
+     "mode": "type",
+     "es": "Soy de Alemania.",
+     "answers": [
+      "Soy de Alemania."
+     ],
+     "nl": "Ik kom uit Duitsland.",
+     "id": "L01-10-e8"
+    },
+    {
+     "type": "choice",
+     "prompt": "Hoe zeg je «Zij is Italiaanse»?",
+     "options": [
+      "Es italiano.",
+      "Es italiana.",
+      "Soy italiana."
+     ],
+     "optionsNl": [
+      "Hij is Italiaan.",
+      "Zij is Italiaanse.",
+      "Ik ben Italiaanse."
+     ],
+     "answer": 1,
+     "explain": "Een vrouw is **italiana**, en bij **ella** hoort **es**.",
+     "id": "L01-10-e9"
+    },
+    {
+     "type": "build",
+     "prompt": "Zeg: «Ik ben politieagent.»",
+     "words": [
+      "Soy",
+      "policía.",
+      "Eres",
+      "es"
+     ],
+     "answers": [
+      "Soy policía."
+     ],
+     "id": "L01-10-e10"
+    },
+    {
+     "type": "fill",
+     "sentence": "¿Cómo ___ usted?",
+     "answers": [
+      "se llama"
+     ],
+     "base": "(llamarse)",
+     "nl": "Hoe heet u?",
+     "explain": "Bij **usted** gebruik je **se llama**.",
+     "id": "L01-10-e11"
+    },
+    {
+     "type": "write",
+     "prompt": "Vraag een vreemde (usted) waar hij vandaan komt.",
+     "answers": [
+      "¿De dónde es usted?",
+      "¿De dónde es?"
+     ],
+     "hint": "Begin met **¿De dónde ...**",
+     "wrong": [
+      {
+       "match": "eres",
+       "feedback": "**eres** is voor **tú**. Bij **usted** zeg je **es**."
+      }
+     ],
+     "id": "L01-10-e12"
+    },
+    {
+     "type": "choice",
+     "prompt": "Welk getal is **catorce**?",
+     "optionsLang": "nl",
+     "options": [
+      "4",
+      "14",
+      "40"
+     ],
+     "answer": 1,
+     "explain": "**cuatro** = 4, **catorce** = 14.",
+     "id": "L01-10-e13"
+    },
+    {
+     "type": "listen",
+     "mode": "choose",
+     "es": "diecisiete",
+     "options": [
+      "diecisiete",
+      "dieciséis",
+      "diecinueve"
+     ],
+     "answer": 0,
+     "nl": "zeventien",
+     "id": "L01-10-e14"
+    },
+    {
+     "type": "fill",
+     "sentence": "Cinco, seis, ___, ocho.",
+     "answers": [
+      "siete"
+     ],
+     "base": "(7)",
+     "nl": "Vijf, zes, zeven, acht.",
+     "explain": "**siete** = 7.",
+     "id": "L01-10-e15"
+    },
+    {
+     "type": "build",
+     "prompt": "Vraag: «Hoe schrijf je dat?»",
+     "words": [
+      "¿Cómo",
+      "se",
+      "escribe?",
+      "dice?",
+      "llama?"
+     ],
+     "answers": [
+      "¿Cómo se escribe?"
+     ],
+     "id": "L01-10-e16"
+    },
+    {
+     "type": "write",
+     "prompt": "Zeg dat je het niet begrijpt en vraag beleefd om herhaling.",
+     "answers": [
+      "No entiendo. ¿Puede repetir, por favor?",
+      "No entiendo. ¿Puede repetir?",
+      "No entiendo, ¿puede repetir, por favor?",
+      "No entiendo, ¿puede repetir?"
+     ],
+     "hint": "Twee delen: **no entiendo** en een vraag met **repetir**.",
+     "id": "L01-10-e17"
+    },
+    {
+     "type": "choice",
+     "prompt": "Iemand spreekt te snel en je verstaat het niet. Wat zeg je?",
+     "options": [
+      "Buenos días.",
+      "De nada.",
+      "Más despacio, por favor."
+     ],
+     "optionsNl": [
+      "Goedemorgen.",
+      "Graag gedaan.",
+      "Langzamer, alstublieft."
+     ],
+     "answer": 2,
+     "id": "L01-10-e18"
+    },
+    {
+     "type": "write",
+     "prompt": "Stel jezelf voor: je heet Sam, je komt uit Nederland en je bent politieagent.",
+     "answers": [
+      "Me llamo Sam, soy de los Países Bajos y soy policía.",
+      "Me llamo Sam. Soy de los Países Bajos. Soy policía.",
+      "Me llamo Sam, soy de Holanda y soy policía.",
+      "Me llamo Sam. Soy de Holanda. Soy policía.",
+      "Me llamo Sam, soy neerlandés y soy policía.",
+      "Me llamo Sam, soy de los Países Bajos y soy agente de policía.",
+      "Me llamo Sam. Soy de Holanda. Soy agente de policía."
+     ],
+     "hint": "Naam (**me llamo**), herkomst (**soy de**) en beroep (**soy**).",
+     "id": "L01-10-e19"
+    },
+    {
+     "type": "listen",
+     "mode": "choose",
+     "es": "¿Cómo se llama usted?",
+     "options": [
+      "¿Cómo te llamas?",
+      "¿Cómo se llama usted?",
+      "¿Cómo se escribe?"
+     ],
+     "answer": 1,
+     "nl": "Hoe heet u?",
+     "id": "L01-10-e20"
+    }
+   ],
+   "id": "L01-10"
+  }
+ ]
+}

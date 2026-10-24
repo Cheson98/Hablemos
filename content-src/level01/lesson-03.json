@@ -1,0 +1,90 @@
+{
+  "kind": "dialogue",
+  "title": "Een gesprek in een tapasbar",
+  "emoji": "🍷",
+  "dialogue": {
+    "setting": "Het is avond. Je zit in een tapasbar in Madrid. Naast je zit Lucía, een Spaanse vrouw van jouw leeftijd. Jullie zeggen «tú» tegen elkaar. Jij heet in dit gesprek Sam.",
+    "formal": "tú",
+    "npcName": "Lucía",
+    "npcEmoji": "👩",
+    "turns": [
+      { "who": "npc", "es": "¡Buenas noches!", "nl": "Goedenavond!" },
+      {
+        "who": "you",
+        "ex": {
+          "type": "choice",
+          "prompt": "Begroet haar terug.",
+          "options": ["Buenas noches.", "Buenos días.", "Hasta mañana."],
+          "optionsNl": ["Goedenavond.", "Goedemorgen.", "Tot morgen."],
+          "answer": 0
+        }
+      },
+      { "who": "npc", "es": "¿Qué tal?", "nl": "Hoe gaat het?" },
+      {
+        "who": "you",
+        "ex": {
+          "type": "choice",
+          "prompt": "Zeg dat het zo-zo gaat en vraag hoe het met haar gaat.",
+          "options": ["Regular, gracias. ¿Y usted?", "Hasta mañana. ¿Y tú?", "Regular, gracias. ¿Y tú?"],
+          "optionsNl": ["Zo-zo, dank je. En met u?", "Tot morgen. En met jou?", "Zo-zo, dank je. En met jou?"],
+          "answer": 2,
+          "explain": "Lucía is een leeftijdsgenote, dus je zegt **tú**: **¿Y tú?**"
+        }
+      },
+      { "who": "npc", "es": "Muy bien, gracias.", "nl": "Heel goed, dank je." },
+      {
+        "who": "you",
+        "ex": {
+          "type": "choice",
+          "prompt": "Vraag hoe ze heet.",
+          "options": ["¿Cómo se llama usted?", "¿Cómo te llamas?", "¿Cómo estás?"],
+          "optionsNl": ["Hoe heet u?", "Hoe heet je?", "Hoe gaat het met je?"],
+          "answer": 1
+        }
+      },
+      { "who": "npc", "es": "Me llamo Lucía. ¿Y tú?", "nl": "Ik heet Lucía. En jij?" },
+      {
+        "who": "you",
+        "ex": {
+          "type": "build",
+          "prompt": "Zeg dat je Sam heet.",
+          "words": ["Me", "llamo", "Sam.", "te", "llamas"],
+          "answers": ["Me llamo Sam."],
+          "hint": "Het zijn drie woorden. Jij zegt **llamo**, niet **llamas**."
+        }
+      },
+      { "who": "npc", "es": "Mucho gusto, Sam.", "nl": "Aangenaam, Sam." },
+      {
+        "who": "you",
+        "ex": {
+          "type": "choice",
+          "prompt": "Zeg dat het jou ook aangenaam is.",
+          "options": ["Perdón.", "Adiós.", "Mucho gusto."],
+          "optionsNl": ["Sorry.", "Tot ziens.", "Aangenaam."],
+          "answer": 2
+        }
+      },
+      { "who": "npc", "es": "Es tarde, Sam. Hasta mañana.", "nl": "Het is laat, Sam. Tot morgen." },
+      {
+        "who": "you",
+        "ex": {
+          "type": "choice",
+          "prompt": "Neem afscheid: je ziet haar morgen weer.",
+          "options": ["Hasta mañana, Lucía.", "Buenos días, Lucía.", "Mucho gusto, Lucía."],
+          "optionsNl": ["Tot morgen, Lucía.", "Goedemorgen, Lucía.", "Aangenaam, Lucía."],
+          "answer": 0
+        }
+      },
+      { "who": "npc", "es": "¡Buenas noches, Sam!", "nl": "Goedenacht, Sam!" },
+      {
+        "who": "you",
+        "ex": {
+          "type": "build",
+          "prompt": "Zeg goedenacht tegen Lucía.",
+          "words": ["Buenas", "noches,", "Lucía.", "tardes", "días"],
+          "answers": ["Buenas noches, Lucía."]
+        }
+      }
+    ]
+  }
+}

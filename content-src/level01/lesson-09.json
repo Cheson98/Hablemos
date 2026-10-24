@@ -1,0 +1,103 @@
+{
+  "kind": "dialogue",
+  "title": "Eerste contact met een toerist",
+  "emoji": "👮",
+  "dialogue": {
+    "setting": "Je bent agent en staat in uniform bij het Centraal Station. Een Spaanse toerist spreekt je aan. Jullie kennen elkaar niet, dus je zegt «usted». Jij heet Sam.",
+    "formal": "usted",
+    "npcName": "Turista",
+    "npcEmoji": "🧳",
+    "tags": ["politie"],
+    "turns": [
+      { "who": "npc", "es": "Buenas tardes, agente.", "nl": "Goedemiddag, agent." },
+      {
+        "who": "you",
+        "ex": {
+          "type": "choice",
+          "prompt": "Begroet de toerist (het is middag) en vraag beleefd hoe het met hem gaat.",
+          "options": ["Buenas noches. ¿Cómo estás?", "Buenas tardes. ¿Cómo está usted?", "Hasta luego. ¿Cómo está usted?"],
+          "optionsNl": ["Goedenavond. Hoe gaat het met je?", "Goedemiddag. Hoe gaat het met u?", "Tot straks. Hoe gaat het met u?"],
+          "answer": 1,
+          "explain": "Tegen een vreemde zeg je als agent altijd **usted**."
+        }
+      },
+      { "who": "npc", "es": "Bien, gracias. ¿Y usted?", "nl": "Goed, dank u. En u?" },
+      {
+        "who": "you",
+        "ex": {
+          "type": "choice",
+          "prompt": "Zeg dat het goed gaat.",
+          "options": ["Bien, gracias.", "De nada.", "Perdone."],
+          "optionsNl": ["Goed, dank u.", "Graag gedaan.", "Pardon."],
+          "answer": 0
+        }
+      },
+      { "who": "npc", "es": "¿Cómo se llama usted, agente?", "nl": "Hoe heet u, agent?" },
+      {
+        "who": "you",
+        "ex": {
+          "type": "build",
+          "prompt": "Zeg dat je Sam heet en dat je agent van de politie bent.",
+          "words": ["Me", "llamo", "Sam.", "Soy", "agente", "de", "policía.", "llama", "eres"],
+          "answers": ["Me llamo Sam. Soy agente de policía.", "Me llamo Sam. Soy policía."],
+          "hint": "Twee korte zinnen: eerst **me llamo**, dan **soy**."
+        }
+      },
+      { "who": "npc", "es": "Mucho gusto, agente. Me llamo Pablo.", "nl": "Aangenaam, agent. Ik heet Pablo." },
+      {
+        "who": "you",
+        "ex": {
+          "type": "choice",
+          "prompt": "Zeg dat het je aangenaam is en vraag beleefd waar hij vandaan komt.",
+          "options": ["Mucho gusto. ¿De dónde es usted?", "Mucho gusto. ¿De dónde eres?", "Mucho gusto. ¿Cómo está usted?"],
+          "optionsNl": ["Aangenaam. Waar komt u vandaan?", "Aangenaam. Waar kom je vandaan?", "Aangenaam. Hoe gaat het met u?"],
+          "answer": 0
+        }
+      },
+      { "who": "npc", "es": "Soy de España, de Sevilla.", "nl": "Ik kom uit Spanje, uit Sevilla." },
+      {
+        "who": "you",
+        "ex": {
+          "type": "choice",
+          "prompt": "Vraag hoe zijn naam wordt geschreven.",
+          "options": ["¿Cómo se dice?", "¿Cómo se llama?", "¿Cómo se escribe?"],
+          "optionsNl": ["Hoe zeg je het?", "Hoe heet hij?", "Hoe schrijf je het?"],
+          "answer": 2
+        }
+      },
+      { "who": "npc", "es": "Pablo. Pe, a, be, ele, o.", "nl": "Pablo. P-A-B-L-O." },
+      {
+        "who": "you",
+        "ex": {
+          "type": "build",
+          "prompt": "Controleer de spelling: zeg zijn naam letter voor letter (P-A-B-L-O).",
+          "words": ["pe", "a", "be", "ele", "o", "ese", "ce"],
+          "answers": ["pe a be ele o"],
+          "hint": "P = pe, A = a, B = be, L = ele, O = o."
+        }
+      },
+      { "who": "npc", "es": "Sí, correcto. Muchas gracias, agente.", "nl": "Ja, juist. Hartelijk bedankt, agent." },
+      {
+        "who": "you",
+        "ex": {
+          "type": "choice",
+          "prompt": "Zeg dat het geen moeite is en neem afscheid.",
+          "options": ["Perdón. Hasta luego.", "De nada. Hasta luego.", "Gracias. Buenas noches."],
+          "optionsNl": ["Sorry. Tot straks.", "Graag gedaan. Tot straks.", "Dank u. Goedenacht."],
+          "answer": 1,
+          "explain": "Als iemand jou bedankt, zeg je **de nada**."
+        }
+      },
+      { "who": "npc", "es": "Hasta luego, agente.", "nl": "Tot ziens, agent." },
+      {
+        "who": "you",
+        "ex": {
+          "type": "build",
+          "prompt": "Neem afscheid van Pablo.",
+          "words": ["Hasta", "luego,", "mañana,", "Pablo.", "días"],
+          "answers": ["Hasta luego, Pablo.", "Hasta mañana, Pablo."]
+        }
+      }
+    ]
+  }
+}

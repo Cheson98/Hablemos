@@ -1,0 +1,120 @@
+{
+  "kind": "practice",
+  "title": "Oefen: begroeten",
+  "emoji": "✏️",
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Wat betekent «Hasta luego»?",
+      "optionsLang": "nl",
+      "options": ["Goedemorgen", "Tot straks / tot ziens", "Graag gedaan"],
+      "answer": 1,
+      "explain": "**Hasta luego** gebruik je als je elkaar later nog ziet of gewoon als «tot ziens»."
+    },
+    {
+      "type": "listen",
+      "mode": "choose",
+      "es": "Buenos días.",
+      "options": ["Buenas tardes.", "Buenos días.", "Buenas noches."],
+      "answer": 1,
+      "nl": "Goedemorgen."
+    },
+    {
+      "type": "choice",
+      "prompt": "Het is elf uur 's avonds. Wat zeg je als je binnenkomt?",
+      "options": ["Buenos días.", "Hasta mañana.", "Buenas noches."],
+      "optionsNl": ["Goedemorgen.", "Tot morgen.", "Goedenavond."],
+      "answer": 2,
+      "explain": "Als het donker is, zeg je **buenas noches**."
+    },
+    {
+      "type": "fill",
+      "sentence": "Buenos ___.",
+      "answers": ["días"],
+      "base": "(goedemorgen)",
+      "nl": "Goedemorgen.",
+      "explain": "**Buenos días** staat in het meervoud, net als **buenas tardes**."
+    },
+    {
+      "type": "choice",
+      "prompt": "Je praat met een goede vriend. Wat vraag je?",
+      "options": ["¿Cómo está usted?", "¿Cómo estás?", "Muchas gracias."],
+      "optionsNl": ["Hoe gaat het met u?", "Hoe gaat het met je?", "Hartelijk bedankt."],
+      "answer": 1,
+      "explain": "Tegen een vriend gebruik je **tú**: **¿Cómo estás?**"
+    },
+    {
+      "type": "build",
+      "prompt": "Zeg: «Tot morgen.»",
+      "words": ["Hasta", "mañana.", "luego", "días"],
+      "answers": ["Hasta mañana."]
+    },
+    {
+      "type": "choice",
+      "prompt": "Muy bien, gracias. ¿Y usted?",
+      "promptLang": "es",
+      "speak": "Muy bien, gracias. ¿Y usted?",
+      "nl": "Heel goed, dank u. En u?",
+      "options": ["Bien, gracias.", "Hasta luego.", "Perdone."],
+      "optionsNl": ["Goed, dank u.", "Tot straks.", "Pardon."],
+      "answer": 0,
+      "explain": "Op «¿Y usted?» antwoord je kort over jezelf: **Bien, gracias.**"
+    },
+    {
+      "type": "write",
+      "prompt": "Bedank iemand: «Hartelijk bedankt.»",
+      "answers": ["Muchas gracias."],
+      "hint": "Twee woorden. Het eerste betekent «veel».",
+      "explain": "**Gracias** = dank je. **Muchas gracias** = hartelijk bedankt."
+    },
+    {
+      "type": "listen",
+      "mode": "type",
+      "es": "Hasta mañana.",
+      "answers": ["Hasta mañana."],
+      "nl": "Tot morgen."
+    },
+    {
+      "type": "choice",
+      "prompt": "Je botst per ongeluk tegen iemand aan. Wat zeg je?",
+      "options": ["De nada.", "Perdón.", "Hasta luego."],
+      "optionsNl": ["Graag gedaan.", "Sorry.", "Tot straks."],
+      "answer": 1,
+      "explain": "**Perdón** gebruik je om sorry te zeggen. **De nada** zeg je als iemand jou bedankt."
+    },
+    {
+      "type": "fill",
+      "sentence": "¿Cómo ___?",
+      "answers": ["estás"],
+      "base": "(tegen een vriend)",
+      "nl": "Hoe gaat het met je?",
+      "explain": "Bij **tú** eindigt het werkwoord op **-s**: **estás**. Bij **usted** is het **está**."
+    },
+    {
+      "type": "build",
+      "prompt": "Zeg: «Heel goed, dank u.»",
+      "words": ["Muy", "bien,", "gracias.", "mal", "de", "nada."],
+      "answers": ["Muy bien, gracias."]
+    },
+    {
+      "type": "write",
+      "prompt": "Zeg «Goedemiddag» en vraag beleefd hoe het gaat (u).",
+      "answers": [
+        "Buenas tardes. ¿Cómo está usted?",
+        "Buenas tardes, ¿cómo está usted?",
+        "Buenas tardes. ¿Cómo está?",
+        "Buenas tardes, ¿cómo está?"
+      ],
+      "hint": "Begin met de groet voor de middag, daarna de vraag.",
+      "wrong": [{ "match": "dias", "feedback": "**días** hoort bij de ochtend. Voor de middag zeg je **buenas tardes**." }]
+    },
+    {
+      "type": "listen",
+      "mode": "choose",
+      "es": "¿Cómo está usted?",
+      "options": ["¿Cómo estás?", "¿Cómo está usted?", "¿Qué tal?"],
+      "answer": 1,
+      "nl": "Hoe gaat het met u?"
+    }
+  ]
+}
